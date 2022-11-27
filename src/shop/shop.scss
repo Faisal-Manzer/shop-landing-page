@@ -228,3 +228,44 @@ footer {
     border-radius: 0rem;
   }
 }
+
+.circle {
+  width: 9rem;
+  height: 9rem;
+  background: rgb(226, 226, 226);
+  border-radius: 10rem;
+  position: absolute;
+  top: -70%;
+  right: 40%;
+  z-index: -1;
+}
+
+.circle1 {
+  width: 2rem;
+  height: 2rem;
+  background: rgb(229, 229, 229);
+  border-radius: 10rem;
+  position: absolute;
+  top: -70%;
+  left: 0%;
+}
+
+.circle2 {
+  width: 5rem;
+  height: 5rem;
+  background: rgb(229, 229, 229);
+  border-radius: 10rem;
+  position: absolute;
+  top: -50%;
+  right: 0%;
+}
+
+.circle3 {
+  width: 4.3rem;
+  height: 4.3rem;
+  background: rgb(229, 229, 229);
+  border-radius: 10rem;
+  position: absolute;
+  bottom: -30%;
+  right: 40%;
+}

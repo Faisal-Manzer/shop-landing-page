@@ -51,6 +51,7 @@ const Shop = () => {
       <InternalCommitee /> */}
       {/* <FAQS /> */}
       <Sell />
+      <Detail />
       <RequestForm />
       <NewLetter />
       <Footer />
@@ -655,6 +656,55 @@ const RequestForm = () => {
           </div>
         </div>
       </div>
+    </div>
+  );
+};
+
+const Detail = () => {
+  return (
+    <div
+      className="container position-relative"
+      style={{ marginTop: "6rem", marginBottom: "5rem" }}
+    >
+      <Row>
+        <Col sm="6">
+          <img
+            src={landing}
+            width="650px"
+            height="650px"
+            style={{
+              borderRadius: "40rem",
+              objectFit: "cover",
+              marginLeft: "-10rem",
+              marginBottom: "2rem",
+            }}
+          />
+        </Col>
+        <Col
+          sm="6"
+          style={{ fontSize: "1.1rem" }}
+          className="d-flex justify-content-center align-items-center b-500 p-2"
+        >
+          <div className="position-relative">
+            <p>
+              SPHECHO Shop is a growing platform for selling online. Be it a
+              manufacturer, vendor or supplier, simply sell your products online
+              on SPHECHO and become a top e-commerce player with minimum
+              investment. Through a team of experts offering exclusive at
+              support@sphecho.com, SPHECHO focuses on empowering sellers across
+              the globe.
+            </p>
+            <p>
+              Selling on SPHECHO is effortless. All you need is to register, and
+              the assigned account manager will get in touch with you.
+            </p>
+            <div className="circle"></div>
+            <div className="circle1"></div>
+            <div className="circle2"></div>
+            <div className="circle3"></div>
+          </div>
+        </Col>
+      </Row>
     </div>
   );
 };
