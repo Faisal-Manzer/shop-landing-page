@@ -111,10 +111,27 @@ const NavBar = () => {
 const Banner = () => {
   return (
     <div
-      className="banner-container position: relative"
-      style={{ height: "130vh", width: "100wh" }}
+      className="banner-container position-relative"
+      style={{ height: "130vh", width: "100%" }}
     >
-      <div className="clip-container position-relative">
+      <svg
+        id="svgPath"
+        viewBox="0 0 1438 693"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <clipPath id="clipPath" clipPathUnits="objectBoundingBox">
+            <path
+              transform="scale(0.001390820584, 0.00144300144)"
+              d="M153 598C56.6 601.2 56.5 630 0.5 660V0.5H1437.5V566C1413.05 580.421 1210.85 695.396 1066.5 692C913.885 688.409 817.872 566 758 566C641.5 566 550.202 680 465.5 680C341.5 680 273.5 594 153 598Z"
+              stroke="black"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+
+      <div className="clip-container w-100 position-relative">
         <Carousel>
           <Carousel.Item>
             <img
@@ -128,17 +145,19 @@ const Banner = () => {
             </Carousel.Caption> */}
           </Carousel.Item>
         </Carousel>
-        <h1 className="banner-title">
-          YOU CAN ALWAYS
-          <i>
-            <b style={{ fontSize: "3rem" }}> FIND</b>
-          </i>{" "}
-          <br></br>
-          SOMETHING YOU
-          <i>
-            <b style={{ fontSize: "3rem" }}> WANT</b>
-          </i>
-        </h1>
+        <div className="banner-title">
+          <h1 className="container">
+            YOU CAN ALWAYS
+            <i>
+              <b style={{ fontSize: "3rem" }}> FIND</b>
+            </i>{" "}
+            <br></br>
+            SOMETHING YOU
+            <i>
+              <b style={{ fontSize: "3rem" }}> WANT</b>
+            </i>
+          </h1>
+        </div>
       </div>
     </div>
   );
