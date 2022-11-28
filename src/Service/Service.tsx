@@ -19,9 +19,14 @@ import effective from "../assets/effective.png";
 import assessment from "../assets/assessment.png";
 import match from "../assets/match.png";
 import start from "../assets/start.png";
-
+//
 import works from "../assets/works.png";
+//
+import synchornous from "../assets/synchornous.png";
+import hybrid from "../assets/hybrid.png";
+import asynchronous from "../assets/asynchronous.png";
 
+//
 import apple from "../assets/apple.png";
 import fb from "../assets/fb.png";
 import ig from "../assets/ig.png";
@@ -36,9 +41,12 @@ const Service = () => {
     <div style={{ position: "relative" }}>
       <NavBar />
       <Banner />
+      <SmallBanner />
+      <Methods />
       <TopCategories />
       <Detail />
       <Sell />
+      <Story />
       <RequestForm />
       <NewLetter />
       <Footer />
@@ -147,60 +155,101 @@ const Banner = () => {
   );
 };
 
-// const StoreContainer = () => {
-//   const store = [
-//     {
-//       name: "THERAPY MATERIALS",
-//       img: therapy,
-//     },
-//     {
-//       name: `PLAY & DEVELOPMENT`,
-//       img: play,
-//     },
-//     {
-//       name: `HEARING AIDS & ACCESSSORIES`,
-//       img: hearing,
-//     },
-//     {
-//       name: `STARTER KIT`,
-//       img: kit,
-//     },
-//   ];
+const SmallBanner = () => {
+  return (
+    <div className="container" style={{ marginTop: "8rem" }}>
+      <div className="m-auto w-75 my-4 d-flex flex-column justify-content-center">
+        <h2 className="benefits-title text-landingPrimary bg-300 text-center mb-4 pb-4 text-center">
+          Convenient and affordable therapy with SPHECHO anytime, anywhere
+        </h2>
+        <button
+          className="bg-landingPrimary text-white b-700 p-3 my-3 br-4 px-4"
+          style={{
+            fontSize: "1.7rem",
+            outline: "none",
+            border: "none",
+            margin: "auto",
+          }}
+        >
+          BOOK APPOINTMENT
+        </button>
+      </div>
+    </div>
+  );
+};
 
-//   return (
-//     <div className="container w-75 text-center">
-//       <h2 className="benefits-title bg-600 text-center mb-4 pb-4">STORE</h2>
-//       <Row>
-//         {store.map((s) => (
-//           <Col key={s.name} sm="3" className="mb-4">
-//             <img className="shop-img" src={s.img} />
-//             <p className="m-auto b-600 w-50 mt-3">{s.name}</p>
-//           </Col>
-//         ))}
-//       </Row>
-//     </div>
-//   );
-// };
-
-// const ResourceHub = () => {
-//   const hubImgs = [educational, organised, worksheet, bundles];
-//   return (
-//     <div className="container w-75 text-center" style={{ marginTop: "7rem" }}>
-//       <h2 className="benefits-title bg-600 text-center mb-4 pb-4">
-//         RESOURCE HUB
-//       </h2>
-//       <Row>
-//         {hubImgs.map((h) => (
-//           <Col key={h} sm="3">
-//             <Link to="">
-//               <img src={h} style={{ width: "15rem" }} />
-//             </Link>
-//           </Col>
-//         ))}
-//       </Row>
-//     </div>
-//   );
-// };
+const Methods = () => {
+  return (
+    <div className="container position-relative" style={{ marginTop: "11rem" }}>
+      <h1
+        className="benefits-title text-landingPrimary text-center mb-4 pb-4 text-center"
+        style={{ fontWeight: "700" }}
+      >
+        METHODS OF SERVICE PROVISION AT SPHECHO
+      </h1>
+      <Row>
+        <Col sm="4">
+          <img src={synchornous} width="340rem" className="m-img" />
+          <h4 className="text-landingDarkGray text-center b-700 mt-4">
+            SYNCHRONOUS
+          </h4>
+          <p className="text-landingDarkGray text-center">
+            Synchronous refers to services provided live in real time as 2-way
+            conferencing via teletherapy
+          </p>
+        </Col>
+        <Col sm="4">
+          <img src={hybrid} width="340rem" className="mid-img m-img" />
+          <h4 className="text-landingDarkGray text-center b-700 mt-4">
+            HYBRID
+          </h4>
+          <p className="text-landingDarkGray long-text text-center">
+            Hybrid refers to a combination of synchronous and asynchronous
+            approaches as needed. This service consists of alternating inperson
+            and teletherapy sessions i.e., based on individual client scenario
+            new client appointments are virtual, and/or initial follow up could
+            be in-person. New client appointments otien place heavy emphasis on
+            detailed history. This can be completed via teletherapy which, by
+            design, is more conversation focused. Follow-up appointments can be
+            initially scheduled as in-person visits, given that many of these
+            appointments require problem-focused physical assessments and
+            diagnostic work. Subsequent visits can be teletherapy if this seems
+            appropriate to the client and the provider
+          </p>
+        </Col>
+        <Col sm="4">
+          <img src={asynchronous} width="340rem" className="m-img" />
+          <h4 className="text-landingDarkGray text-center b-700 mt-4">
+            ASYNCHRONOUS
+          </h4>
+          <p className="text-landingDarkGray text-center">
+            Asynchronous refers to services provided to clients in-person
+          </p>
+        </Col>
+      </Row>
+      <div className="mid-text m-auto w-75">
+        <p className="text-landingDarkGray" style={{ textAlign: "justify" }}>
+          Hybrid refers to a combination of synchronous and asynchronous
+          approaches as needed. This service consists of alternating inperson
+          and teletherapy sessions i.e., based on individual client scenario new
+          client appointments are virtual, and/or initial follow up could be
+          in-person. New client appointments otien place heavy emphasis on
+          detailed history. This can be completed via teletherapy which, by
+          design, is more conversation focused. Follow-up appointments can be
+          initially scheduled as in-person visits, given that many of these
+          appointments require problem-focused physical assessments and
+          diagnostic work. Subsequent visits can be teletherapy if this seems
+          appropriate to the client and the provider
+        </p>
+      </div>
+      <div className="m1c"></div>
+      <div className="m2c"></div>
+      <div className="m3c"></div>
+      <div className="m4c"></div>
+      <div className="m5c"></div>
+    </div>
+  );
+};
 
 const TopCategories = () => {
   const hubImgs = [professional, affordable, convenient, effective];
@@ -258,271 +307,32 @@ const Sell = () => {
   );
 };
 
-// const Board = () => {
-//   return (
-//     <div className="text-center w-75 m-auto">
-//       <h1 className="text-landingPrimary b-600 mb-4">SPHECHO BOARD</h1>
-//       <p className="my-4" style={{ fontSize: "1.2rem" }}>
-//         The SPHECHO certification procedures and content undergo various reviews
-//         and validation, pursuant to the professions that are eligible for
-//         certification, as well as standards established by content experts in
-//         the field across the globe. Please click on a topic below to view common
-//         questions. Once you have chosen your topic simply click any question to
-//         reveal the answer. Can’t find an answer to your question? Contact us
-//         today. Our board at SPHECHO is commitied to ensuring the creation and
-//         implementation of world-class training and certification programs that
-//         will enhance the general standard of care and instruction for
-//         professionals, parents, and caregivers. The Board is made up of a
-//         variety of the world's top experts, researchers from prestigious
-//         universities, special education directors, corporate leaders, clinicians
-//         in the field of mental health, speech therapists, occupational
-//         therapists, physiotherapists, behavioral therapists and psychologists,
-//         counsellors, audiologists, and parents.
-//       </p>
-//     </div>
-//   );
-// };
-
-// const Member = ({
-//   name,
-//   title,
-//   img,
-// }: {
-//   name: string;
-//   title: string;
-//   img?: string;
-// }) => {
-//   return (
-//     <div>
-//       <img
-//         className="fluid shadow mb-3"
-//         src={noImage}
-//         width="180rem"
-//         style={{ borderRadius: "50%" }}
-//       />
-//       <p className="mb-1 b-600" style={{ fontSize: "1.4rem" }}>
-//         {name}
-//       </p>
-//       <p>
-//         <i style={{ fontSize: "1.2rem" }}>{title}</i>
-//       </p>
-//     </div>
-//   );
-// };
-
-// const Committe = () => {
-//   const advaisoryMemebers = [
-//     {
-//       id: 1,
-//       name: "Dr. Swaleha Mohamedali",
-//       title: "Educational consultant",
-//     },
-//     {
-//       id: 2,
-//       name: "Dr. Aamir Khamis Al Toubi",
-//       title: "Consultant Speech Language Pathologist",
-//     },
-//     {
-//       id: 3,
-//       name: "Udaya Kiran Guttarlapalle",
-//       title: "Senior Speech Language Pathologist",
-//     },
-//   ];
-
-//   return (
-//     <div className="container" style={{ marginTop: "7rem" }}>
-//       <div
-//         style={{ width: "90%" }}
-//         className="m-auto br-4 bg-landingGary text-center py-5 px-4"
-//       >
-//         <h5 className="mb-4 pb-3">ADVISORY PANEL MEMBERS</h5>
-//         <Row className="mb-2">
-//           {advaisoryMemebers.map((member) => (
-//             <Col key={member.id} sm="4" className="text-center">
-//               <Member {...{ ...member }} />
-//             </Col>
-//           ))}
-//         </Row>
-//       </div>
-//     </div>
-//   );
-// };
-
-// const InternalCommitee = () => {
-//   const members = [
-//     [
-//       {
-//         id: 1,
-//         name: "Sathish Chandra Segar",
-//         title: `Clinical Director at the Qatar Institute for Speech & Hearing`,
-//       },
-//       {
-//         id: 2,
-//         name: "Hebatulla Ibrahim Farrag",
-//         title: `Clinical Director and Speech and Language Pathologist at the Qatar Institute for Speech & Hearing`,
-//       },
-//       {
-//         id: 3,
-//         name: "Varun G Rai",
-//         title: `Clinical Audiologist and Application
-// Specialist at the Qatar Institute for
-// Speech & Hearing`,
-//       },
-//     ],
-//     [
-//       {
-//         id: 1,
-//         name: "Jaseena NK",
-//         title: `Human Resource Manager at
-// Qatar Institute for Speech & Hearing`,
-//       },
-//       {
-//         id: 2,
-//         name: "Mahmoud El Abassiry",
-//         title: `Manager at Qatar Institute for
-// Speech & Hearing`,
-//       },
-//       {
-//         id: 3,
-//         name: "Tamer Rashed",
-//         title: `Manager at Qatar Institute for
-// Speech & Hearing Rehabilitation Center`,
-//       },
-//     ],
-//   ];
-
-//   return (
-//     <div
-//       className="container"
-//       style={{ marginTop: "7rem", marginBottom: "6rem" }}
-//     >
-//       <div
-//         style={{ width: "90%" }}
-//         className="m-auto br-4 bg-landingGary text-center py-5 px-4"
-//       >
-//         <h5 className="mb-4 pb-3">INTERNAL REVIEW COMMITTEE</h5>
-//         <Row className="mb-4">
-//           {members[0].map((member) => (
-//             <Col key={member.id} sm="4" className="text-center">
-//               <Member {...{ ...member }} />
-//             </Col>
-//           ))}
-//         </Row>
-//         <Row className="mb-2">
-//           {members[1].map((member) => (
-//             <Col key={member.id} sm="4" className="text-center">
-//               <Member {...{ ...member }} />
-//             </Col>
-//           ))}
-//         </Row>
-//       </div>
-//     </div>
-//   );
-// };
-
-const FAQS = () => {
-  const faqs = [
-    {
-      id: 1,
-      header: "What is the SPHECHO Certification Program",
-    },
-    {
-      id: 2,
-      header: "Who verifies the SPHECHO credentials?",
-    },
-    {
-      id: 3,
-      header: "What is the value in becoming certified?",
-    },
-    {
-      id: 4,
-      header: "What job can I get with this certification?",
-    },
-    {
-      id: 5,
-      header:
-        "Once I register to begin my certification program, how long do I have to complete the training and exam?",
-    },
-    {
-      id: 6,
-      header: "Is the online learning available on demand?",
-    },
-    {
-      id: 7,
-      header: "When do the courses start?",
-    },
-    {
-      id: 8,
-      header: "When do the courses start?",
-    },
-    {
-      id: 9,
-      header:
-        "After I complete my final exam and submit my application, how long will it be before I get my certification?",
-    },
-  ];
-
-  return (
-    <div
-      className="container m-auto text-center"
-      style={{ marginBottom: "5rem" }}
-    >
-      <div className="w-75 m-auto ">
-        <h1 className="text-landingPrimary my-4">FREQUENTLY ASKED QUESTIONS</h1>
-        <p style={{ fontSize: "1.2rem", marginBottom: "6rem" }}>
-          Please click on a topic below to view common questions. Once you have
-          chosen your topic simply click any question to reveal the answer.
-          Can’t find an answer to your question? Contact us today
-        </p>
-        <Accordion defaultActiveKey="0">
-          {faqs.map((faq) => (
-            <Accordion.Item
-              key={faq.id}
-              eventKey={`${faq.id}`}
-              className="accordion-item"
-            >
-              <Accordion.Header>
-                <p className="accordin-title">{faq.header}</p>
-              </Accordion.Header>
-              <Accordion.Body
-                className="accordin-content"
-                style={{ fontSize: "1.2rem" }}
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </Accordion.Body>
-            </Accordion.Item>
-          ))}
-        </Accordion>
-      </div>
-    </div>
-  );
-};
-
 const RequestForm = () => {
   return (
     <div className="bg-image" style={{ margin: "8rem 0rem" }}>
       <div className="container p-2">
         <div className="m-auto text-center py-4 my-4" style={{ zIndex: 10 }}>
           <h2 className="text-white mb-3 b-700">CONTACT US</h2>
-
+          <h5 className="b-500 text-white">
+            Have any questions? We’d like to hear from you.
+          </h5>
+          <p className="text-white">
+            Please fill out the form below and we will do our best to respond
+            within 1 business day
+          </p>
           <div className="input-container">
             <Row>
               <Col sm="6" className="p-3">
                 <input className="input px-2" placeholder="Name" />
               </Col>
+
               <Col sm={6} className="p-3">
-                <input className="input px-2" placeholder="Phone" />
+                <input className="input" placeholder="Email address" />
               </Col>
             </Row>
             <Row>
               <Col sm={6} className="p-3">
-                <input className="input" placeholder="Email address" />
+                <input className="input px-2" placeholder="Subject" />
               </Col>
             </Row>
             <Row>
@@ -589,6 +399,54 @@ const Detail = () => {
   );
 };
 
+const Story = () => {
+  const slide = [
+    {
+      message: `Michelle listens and provides excellent guidance through life’s situations`,
+      by: "Written by S.A. For Michelle Wilkison (MA, LPC-S)",
+    },
+    {
+      message: `Lorem ipusm the data and shows here`,
+      by: "Written by S.A. For Michelle Wilkison (MA, LPC-S)",
+    },
+  ];
+
+  return (
+    <div className="container m-auto" style={{ paddingTop: "8rem" }}>
+      <h2 className="benefits-title text-landingPrimary bg-300 text-center mb-4 pb-4 text-center">
+        SUCCESS STORIES
+      </h2>
+      <div style={{ marginBottom: "7rem" }}>
+        <Carousel variant="dark" prevIcon={<></>} nextIcon={<></>}>
+          {slide.map((item) => (
+            <Carousel.Item>
+              <div
+                className="br-4"
+                style={{
+                  minHeight: "26rem",
+                  width: "100%",
+                  background: "#F6ECFF",
+                  padding: "6rem",
+                }}
+              >
+                <blockquote>{item.message}</blockquote>
+                <p
+                  className="py-2 text-landingPrimary text-center m-auto b-500 story-by"
+                  style={{ fontSize: "1.5rem", width: "45%" }}
+                >
+                  {item.by}
+                </p>
+                <button className="px-4 py-2 mt-2 br-5 more-story-btn">
+                  More Success Stories
+                </button>
+              </div>
+            </Carousel.Item>
+          ))}
+        </Carousel>
+      </div>
+    </div>
+  );
+};
 const NewLetter = () => {
   return (
     <div className="mb-5 pb-4">
@@ -683,7 +541,7 @@ const Footer = () => {
       <div className="">
         <Row>
           <Col sm="3" className="p-4">
-            <div className="d-flex flex-column align-items-center">
+            <div className="d-flex flex-column align-items-center ">
               <img src={colorLogo} width="126rem" />
               <div className="d-flex mt-2">
                 <img

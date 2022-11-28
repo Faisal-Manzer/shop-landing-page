@@ -36,7 +36,7 @@ $primary: #662d91;
   }
   .banner-title {
     top: 30%;
-    width: 30%;
+    width: 100%;
   }
   .search-container {
     display: none;
@@ -83,6 +83,31 @@ $primary: #662d91;
 //shop
 .shop-img {
   width: 14rem;
+}
+
+.mid-img {
+  margin-top: 10rem;
+}
+
+.long-text {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .mid-text {
+    display: none;
+  }
+  .mid-img {
+    margin-top: 0rem;
+  }
+  .long-text {
+    display: block;
+  }
+  .m-img {
+    width: 17rem;
+    display: block;
+    margin: auto;
+  }
 }
 
 // title content
@@ -136,7 +161,7 @@ $primary: #662d91;
     font-size: 1rem;
   }
   .works-img {
-    width: 500px;
+    width: 470px;
     margin-left: -8rem !important;
   }
 }
@@ -208,6 +233,55 @@ $primary: #662d91;
   border: 2px solid white;
 }
 
+// success stories
+blockquote {
+  font-size: 2.3rem;
+  display: block;
+  font-weight: 500;
+  text-align: center;
+  color: $primary;
+  position: relative;
+}
+blockquote::before,
+blockquote::after {
+  font-size: 9rem;
+  line-height: 0rem;
+  position: absolute;
+}
+blockquote::before {
+  content: open-quote;
+  top: -2%;
+  left: -3%;
+}
+blockquote::after {
+  content: close-quote;
+  bottom: -1%;
+  right: -1%;
+}
+
+.more-story-btn {
+  background: transparent;
+  color: $primary;
+  border: 2px solid $primary;
+  border-radius: 3rem;
+  font-size: 1rem;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+@media only screen and (max-width: 768px) {
+  blockquote {
+    font-size: 2rem;
+  }
+  .story-by {
+    font-size: 1.2rem !important;
+  }
+  blockquote::after {
+    bottom: -7%;
+    right: -20%;
+  }
+}
+
 // footer
 footer {
   background: rgb(231, 231, 231);
@@ -237,6 +311,8 @@ footer {
     border-radius: 0rem;
   }
 }
+
+// --extra---
 
 .circle {
   width: 9rem;
@@ -279,5 +355,58 @@ footer {
   position: absolute;
   bottom: -30%;
   right: 40%;
+  z-index: -10;
+}
+
+.m1c {
+  width: 4.3rem;
+  height: 4.3rem;
+  background: rgb(229, 229, 229);
+  border-radius: 10rem;
+  position: absolute;
+  bottom: 20%;
+  z-index: -10;
+}
+
+.m2c {
+  width: 5rem;
+  height: 5rem;
+  background: rgb(229, 229, 229);
+  border-radius: 10rem;
+  position: absolute;
+  top: 13%;
+  left: 36%;
+  z-index: -10;
+}
+.m3c {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: rgb(229, 229, 229);
+  border-radius: 10rem;
+  position: absolute;
+  top: 23%;
+  left: 58%;
+  z-index: -10;
+}
+
+.m4c {
+  width: 5rem;
+  height: 5rem;
+  background: rgb(229, 229, 229);
+  border-radius: 10rem;
+  position: absolute;
+  top: 13%;
+  // right: -4%;
+  z-index: -10;
+}
+
+.m5c {
+  width: 7rem;
+  height: 7rem;
+  background: rgb(229, 229, 229);
+  border-radius: 10rem;
+  position: absolute;
+  bottom: 30%;
+  right: 0%;
   z-index: -10;
 }
