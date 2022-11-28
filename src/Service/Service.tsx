@@ -9,20 +9,18 @@ import Navbar from "react-bootstrap/Navbar";
 import landing from "../assets/landing.png";
 import logo from "../assets/sphechoLogo.png";
 import colorLogo from "../assets/colorlogo.png";
-// store
-import therapy from "../assets/therapy.png";
-import play from "../assets/play.png";
-import hearing from "../assets/hearing.png";
-import kit from "../assets/kit.png";
-// resoure hub
-import educational from "../assets/educational.png";
-import organised from "../assets/organised.png";
-import worksheet from "../assets/worksheets.png";
-import bundles from "../assets/bundles.png";
+
+import professional from "../assets/professional.png";
+import affordable from "../assets/affordable.png";
+import convenient from "../assets/convenient.png";
+import effective from "../assets/effective.png";
+
 // sell
-import support from "../assets/support.png";
-import growth from "../assets/growth.png";
-import transparent from "../assets/transparency.png";
+import assessment from "../assets/assessment.png";
+import match from "../assets/match.png";
+import start from "../assets/start.png";
+
+import works from "../assets/works.png";
 
 import apple from "../assets/apple.png";
 import fb from "../assets/fb.png";
@@ -38,16 +36,9 @@ const Service = () => {
     <div style={{ position: "relative" }}>
       <NavBar />
       <Banner />
-      <StoreContainer />
-      <ResourceHub />
-      {/* <TitleContainer /> */}
       <TopCategories />
-      {/* <Board />
-      <Committe />
-      <InternalCommitee /> */}
-      {/* <FAQS /> */}
-      <Sell />
       <Detail />
+      <Sell />
       <RequestForm />
       <NewLetter />
       <Footer />
@@ -74,29 +65,25 @@ const NavBar = () => {
           <img src={logo} width="170rem" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <div className="search-container">
-          <input className="search-input" type="search" placeholder="search" />
-        </div>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link as={Link} to="/" className="text-white b-700 link-nav">
-              STORE
+              HOW IT WORKS
             </Nav.Link>
             <Nav.Link as={Link} to="/" className="text-white b-700 link-nav">
-              RESOURCE HUB
+              DEPARTMENTS
             </Nav.Link>
             <Nav.Link as={Link} to="/" className="text-white b-700 link-nav">
-              SELL
+              PROVIDERS
             </Nav.Link>
             <Nav.Link as={Link} to="/" className="text-white b-700 link-nav">
-              SUPPORT
+              JOIN US
             </Nav.Link>
-            <Nav.Link
-              as={Link}
-              to="login"
-              className="text-white b-700 link-nav"
-            >
-              REGISTER
+            <Nav.Link as={Link} to="/" className="text-white b-700 link-nav">
+              GET STARTED
+            </Nav.Link>
+            <Nav.Link as={Link} to="/" className="text-white b-700 link-nav">
+              LOGIN
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
@@ -144,14 +131,14 @@ const Banner = () => {
         </Carousel>
         <div className="banner-title">
           <h1 className="container">
-            YOU CAN ALWAYS
+            THE BEST WAY TO GET THINGS
             <i>
-              <b style={{ fontSize: "3rem" }}> FIND</b>
+              <b style={{ fontSize: "3rem" }}> DONE</b>
             </i>{" "}
             <br></br>
-            SOMETHING YOU
+            IS TO SIMPLY
             <i>
-              <b style={{ fontSize: "3rem" }}> WANT</b>
+              <b style={{ fontSize: "3rem" }}> BEGIN</b>
             </i>
           </h1>
         </div>
@@ -160,122 +147,64 @@ const Banner = () => {
   );
 };
 
-const TitleContainer = () => {
-  return (
-    <div className="title-content">
-      <p>
-        The SPHECHO curriculum and cerification program is for professionals who
-        are responsible for the support and/or services provided to people of
-        determination. The program's objective is to offer a comprehensive,
-        multidisciplinary training program and specialized credential to
-        professionals in order to supplement their existing knowledge, make sure
-        they are up to date on best practices and research, and ensure they
-        incorporate new knowledge into professional practice.
-      </p>
-    </div>
-  );
-};
+// const StoreContainer = () => {
+//   const store = [
+//     {
+//       name: "THERAPY MATERIALS",
+//       img: therapy,
+//     },
+//     {
+//       name: `PLAY & DEVELOPMENT`,
+//       img: play,
+//     },
+//     {
+//       name: `HEARING AIDS & ACCESSSORIES`,
+//       img: hearing,
+//     },
+//     {
+//       name: `STARTER KIT`,
+//       img: kit,
+//     },
+//   ];
 
-const StoreContainer = () => {
-  const store = [
-    {
-      name: "THERAPY MATERIALS",
-      img: therapy,
-    },
-    {
-      name: `PLAY & DEVELOPMENT`,
-      img: play,
-    },
-    {
-      name: `HEARING AIDS & ACCESSSORIES`,
-      img: hearing,
-    },
-    {
-      name: `STARTER KIT`,
-      img: kit,
-    },
-  ];
+//   return (
+//     <div className="container w-75 text-center">
+//       <h2 className="benefits-title bg-600 text-center mb-4 pb-4">STORE</h2>
+//       <Row>
+//         {store.map((s) => (
+//           <Col key={s.name} sm="3" className="mb-4">
+//             <img className="shop-img" src={s.img} />
+//             <p className="m-auto b-600 w-50 mt-3">{s.name}</p>
+//           </Col>
+//         ))}
+//       </Row>
+//     </div>
+//   );
+// };
 
-  return (
-    <div className="container w-75 text-center">
-      <h2 className="benefits-title bg-600 text-center mb-4 pb-4">STORE</h2>
-      <Row>
-        {store.map((s) => (
-          <Col key={s.name} sm="3" className="mb-4">
-            <img className="shop-img" src={s.img} />
-            <p className="m-auto b-600 w-50 mt-3">{s.name}</p>
-          </Col>
-        ))}
-      </Row>
-    </div>
-  );
-};
-
-const ResourceHub = () => {
-  const hubImgs = [educational, organised, worksheet, bundles];
-  return (
-    <div className="container w-75 text-center" style={{ marginTop: "7rem" }}>
-      <h2 className="benefits-title bg-600 text-center mb-4 pb-4">
-        RESOURCE HUB
-      </h2>
-      <Row>
-        {hubImgs.map((h) => (
-          <Col key={h} sm="3">
-            <Link to="">
-              <img src={h} style={{ width: "15rem" }} />
-            </Link>
-          </Col>
-        ))}
-      </Row>
-    </div>
-  );
-};
+// const ResourceHub = () => {
+//   const hubImgs = [educational, organised, worksheet, bundles];
+//   return (
+//     <div className="container w-75 text-center" style={{ marginTop: "7rem" }}>
+//       <h2 className="benefits-title bg-600 text-center mb-4 pb-4">
+//         RESOURCE HUB
+//       </h2>
+//       <Row>
+//         {hubImgs.map((h) => (
+//           <Col key={h} sm="3">
+//             <Link to="">
+//               <img src={h} style={{ width: "15rem" }} />
+//             </Link>
+//           </Col>
+//         ))}
+//       </Row>
+//     </div>
+//   );
+// };
 
 const TopCategories = () => {
-  const categories = [
-    {
-      title: "SHOP BY DEPARTMENT",
-      items: [
-        "SHOP BY DEPARTMENT",
-        "SHOP BY DEPARTMENT",
-        "OCCUPATIONAL THERAPY",
-        "BEHAVIORAL & PSYCHOLOGICAL",
-        "PHYSIOTHERAPY",
-        "COUNCELLING",
-        "---",
-        "COUNCELLING",
-        "---",
-      ],
-    },
-    {
-      title: "POPULAR WITH PROVIDERS",
-      items: [
-        "ORAL MOTOR TOOL",
-        "SPEECH KIT",
-        "BOARD GAMES",
-        "PUZZLES",
-        "PEPPAPIG BUBBLES",
-        "FLUENCY KIT",
-        "---",
-        "FINGER PUPPETS",
-        "---",
-      ],
-    },
-    {
-      title: "TOP SELLERS",
-      items: [
-        "FINGER PUPPETS",
-        "PUZZLES",
-        "PEPPAPIG BUBBLES",
-        "SPEECH KIT",
-        "FLUENCY KIT",
-        "ORAL MOTOR TOOL",
-        "---",
-        "BOARD GAMES",
-        "---",
-      ],
-    },
-  ];
+  const hubImgs = [professional, affordable, convenient, effective];
+
   return (
     <div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -288,55 +217,12 @@ const TopCategories = () => {
         className="m-auto"
         style={{ background: "#F1F0EE", marginTop: "-10%", zIndex: 19 }}
       >
-        <h2 className="benefits-title bg-600 text-center mb-4">
-          TOP CATEGORIES
-        </h2>
-        <Row className="mt-4 m-auto p-3" style={{ maxWidth: "1150px" }}>
-          {categories.map((c) => (
-            <Col key={c.title} sm="4" className="p-3">
-              <div
-                className="br-3 bg-white shadow"
-                style={{ overflow: "hidden" }}
-              >
-                <h5 className="text-center p-3 text-white bg-landingPrimary">
-                  {c.title}
-                </h5>
-                <div className="d-flex flex-wrap p-2 py-4 my-4">
-                  {c.items.map((item) =>
-                    item !== "---" ? (
-                      <Link to="/" style={{ textDecoration: "none" }}>
-                        <div
-                          style={{
-                            borderRadius: "7rem",
-                            backgroundColor: "gray",
-                            width: "5.5rem",
-                            height: "5.5rem",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            flexShrink: "1",
-                            margin: ".5rem",
-                            marginBottom: "1em",
-                          }}
-                        >
-                          <p
-                            className="text-center text-white"
-                            style={{
-                              fontSize: ".55rem",
-                              width: "70%",
-                              marginTop: "1em",
-                            }}
-                          >
-                            {item}
-                          </p>
-                        </div>
-                      </Link>
-                    ) : (
-                      <div style={{ width: "5.5rem", margin: ".5em" }}></div>
-                    )
-                  )}
-                </div>
-              </div>
+        <Row className="container m-auto py-2" style={{ width: "80%" }}>
+          {hubImgs.map((h) => (
+            <Col key={h} sm="3">
+              <Link to="">
+                <img src={h} style={{ width: "15rem" }} />
+              </Link>
             </Col>
           ))}
         </Row>
@@ -356,12 +242,9 @@ const TopCategories = () => {
 };
 
 const Sell = () => {
-  const sellimgs = [support, growth, transparent];
+  const sellimgs = [assessment, match, start];
   return (
     <div className="container ">
-      <h2 className="benefits-title bg-600 text-center mb-4 pb-4">
-        SELL ON SPHECHO
-      </h2>
       <div className="w-75 m-auto">
         <Row>
           {sellimgs.map((image, idx) => (
@@ -648,7 +531,7 @@ const RequestForm = () => {
                 <textarea className="input px-4" style={{ height: "6rem" }} />
               </Col>
             </Row>
-            <Button className="bg-white text-black">Sumbit</Button>
+            <Button className="bg-white text-black br-3">Sumbit</Button>
           </div>
         </div>
       </div>
@@ -660,18 +543,17 @@ const Detail = () => {
   return (
     <div
       className="container position-relative"
-      style={{ marginTop: "6rem", marginBottom: "5rem" }}
+      style={{ marginTop: "6rem", marginBottom: "5rem", maxWidth: "1400px" }}
     >
       <Row>
         <Col sm="6">
           <img
-            src={landing}
-            width="650px"
-            height="650px"
+            className="works-img"
+            src={works}
+            width="930px"
             style={{
-              borderRadius: "40rem",
               objectFit: "cover",
-              marginLeft: "-10rem",
+              marginLeft: "-15rem",
               marginBottom: "2rem",
             }}
           />
@@ -679,20 +561,22 @@ const Detail = () => {
         <Col
           sm="6"
           style={{ fontSize: "1.1rem" }}
-          className="d-flex justify-content-center align-items-center b-500 p-2"
+          className="d-flex justify-content-center align-items-center b-500 p-4"
         >
           <div className="position-relative">
-            <p>
-              SPHECHO Shop is a growing platform for selling online. Be it a
-              manufacturer, vendor or supplier, simply sell your products online
-              on SPHECHO and become a top e-commerce player with minimum
-              investment. Through a team of experts offering exclusive at
-              support@sphecho.com, SPHECHO focuses on empowering sellers across
-              the globe.
+            <h2 className="benefits-title text-landingPrimary bg-600 text-center mb-4 pb-4 text-center">
+              HOW IT WORKS
+            </h2>
+            <p className="b-400 px-3" style={{ textAlign: "justify" }}>
+              We know how difficult it can be to get a face-to-face therapy
+              appointment these days. How expensive it can be. How impossible it
+              can feel to squeeze in a visit in your already hectic schedule.
+              How unsupported you can feel between sessions. And how you just
+              seem to forget all the things your provider told you since that
+              last session.
             </p>
-            <p>
-              Selling on SPHECHO is effortless. All you need is to register, and
-              the assigned account manager will get in touch with you.
+            <p className="b-400 px-3" style={{ textAlign: "justify" }}>
+              No more. This consultation on your terms.
             </p>
             <div className="circle"></div>
             <div className="circle1"></div>
