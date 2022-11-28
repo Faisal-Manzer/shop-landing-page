@@ -5,11 +5,7 @@ import Carousel from "react-bootstrap/Carousel";
 import Accordion from "react-bootstrap/Accordion";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-// import career from "../assets/career.png";
-// import discover from "../assets/discover.png";
-// import enhance from "../assets/enhance.png";
-// import improve from "../assets/improve.png";
-// import noImage from "../assets/no-img.png";
+
 import landing from "../assets/landing.png";
 import logo from "../assets/sphechoLogo.png";
 import colorLogo from "../assets/colorlogo.png";
@@ -35,9 +31,9 @@ import ins from "../assets/in.png";
 import playstore from "../assets/playstore.png";
 import tw from "../assets/tw.png";
 import yt from "../assets/yt.png";
-import "./shop.scss";
+import "./service.scss";
 
-const Shop = () => {
+const Service = () => {
   return (
     <div style={{ position: "relative" }}>
       <NavBar />
@@ -881,4 +877,4 @@ const Footer = () => {
   );
 };
 
-export default Shop;
+export default Service;

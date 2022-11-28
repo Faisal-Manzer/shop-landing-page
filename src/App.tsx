@@ -3,14 +3,14 @@ import { Button } from "react-bootstrap";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./App.scss";
-import Shop from "./shop";
+import Service from "./Service";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/">
-          <Route index element={<Shop />} />
+          <Route index element={<Service />} />
         </Route>
       </Routes>
     </Router>
