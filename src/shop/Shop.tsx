@@ -62,10 +62,9 @@ const Shop = () => {
 const NavBar = () => {
   return (
     <Navbar
-      className="nav-bar-container"
+      className="nav-bar-container-fluid"
       style={{
         position: "absolute",
-        top: "1%",
         left: 0,
         right: 0,
         zIndex: 100,
@@ -73,7 +72,7 @@ const NavBar = () => {
       bg="light"
       expand="lg"
     >
-      <Container>
+      <Container fluid>
         <Navbar.Brand as={Link} to="/">
           <img src={logo} width="170rem" />
         </Navbar.Brand>
@@ -100,7 +99,7 @@ const NavBar = () => {
               to="login"
               className="text-white b-700 link-nav"
             >
-              REGISTER
+              LOGIN/REGISTER
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
@@ -133,7 +132,7 @@ const Banner = () => {
       </svg>
 
       <div className="clip-container w-100 position-relative">
-        <Carousel>
+        <Carousel controls={false}>
           <Carousel.Item>
             <img
               className="d-block coursel-img"
@@ -202,7 +201,7 @@ const StoreContainer = () => {
 
   return (
     <div className="container w-75 text-center">
-      <h2 className="benefits-title bg-600 text-center mb-4 pb-4">STORE</h2>
+      <h2 className="benefits-title bg-600 text-center">STORE</h2>
       <Row>
         {store.map((s) => (
           <Col key={s.name} sm="3" className="mb-4">
@@ -219,9 +218,7 @@ const ResourceHub = () => {
   const hubImgs = [educational, organised, worksheet, bundles];
   return (
     <div className="container w-75 text-center" style={{ marginTop: "7rem" }}>
-      <h2 className="benefits-title bg-600 text-center mb-4 pb-4">
-        RESOURCE HUB
-      </h2>
+      <h2 className="benefits-title bg-600 text-center">RESOURCE HUB</h2>
       <Row>
         {hubImgs.map((h) => (
           <Col key={h} sm="3">
@@ -288,16 +285,13 @@ const TopCategories = () => {
           d="M0,96L80,112C160,128,320,160,480,149.3C640,139,800,85,960,74.7C1120,64,1280,96,1360,112L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
         ></path>
       </svg>
-      <div
-        className="m-auto"
-        style={{ background: "#F1F0EE", marginTop: "-10%", zIndex: 19 }}
-      >
+      <div className="m-auto" style={{ background: "#F1F0EE", zIndex: 19 }}>
         <h2 className="benefits-title bg-600 text-center mb-4">
           TOP CATEGORIES
         </h2>
-        <Row className="mt-4 m-auto p-3" style={{ maxWidth: "1150px" }}>
+        <Row className="m-auto p-3" style={{ maxWidth: "1150px" }}>
           {categories.map((c) => (
-            <Col key={c.title} sm="4" className="p-3">
+            <Col key={c.title} sm="4" className="px-3 pb-3">
               <div
                 className="br-3 bg-white shadow"
                 style={{ overflow: "hidden" }}
@@ -346,7 +340,7 @@ const TopCategories = () => {
         </Row>
       </div>
       <svg
-        style={{ marginTop: "-1rem", zIndex: "-400" }}
+        style={{ marginTop: "-1.5rem", zIndex: "-400" }}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
       >
@@ -362,16 +356,19 @@ const TopCategories = () => {
 const Sell = () => {
   const sellimgs = [support, growth, transparent];
   return (
-    <div className="container ">
-      <h2 className="benefits-title bg-600 text-center mb-4 pb-4">
-        SELL ON SPHECHO
-      </h2>
+    <div className="container">
+      <h2 className="benefits-title bg-600 text-center">SELL ON SPHECHO</h2>
       <div className="w-75 m-auto">
         <Row>
           {sellimgs.map((image, idx) => (
-            <Col key={idx} sm="4">
-              <img src={image} width="250rem" />
-            </Col>
+            <>
+              <Col key={idx} sm="4">
+                <div className="d-flex text-center justify-content-end align-items-center">
+                  {idx === 0 ? <></> : <h1 style={{ color: "gray" }}>{"▸"}</h1>}
+                  <img src={image} width="300rem" height="350rem" />
+                </div>
+              </Col>
+            </>
           ))}
         </Row>
       </div>
@@ -456,7 +453,7 @@ const Sell = () => {
 //         style={{ width: "90%" }}
 //         className="m-auto br-4 bg-landingGary text-center py-5 px-4"
 //       >
-//         <h5 className="mb-4 pb-3">ADVISORY PANEL MEMBERS</h5>
+//         <h5 className=">ADVISORY PANEL MEMBERS</h5>
 //         <Row className="mb-2">
 //           {advaisoryMemebers.map((member) => (
 //             <Col key={member.id} sm="4" className="text-center">
@@ -521,7 +518,7 @@ const Sell = () => {
 //         style={{ width: "90%" }}
 //         className="m-auto br-4 bg-landingGary text-center py-5 px-4"
 //       >
-//         <h5 className="mb-4 pb-3">INTERNAL REVIEW COMMITTEE</h5>
+//         <h5 className=">INTERNAL REVIEW COMMITTEE</h5>
 //         <Row className="mb-4">
 //           {members[0].map((member) => (
 //             <Col key={member.id} sm="4" className="text-center">
@@ -648,11 +645,15 @@ const RequestForm = () => {
             </Row>
             <Row>
               <Col className="p-2">
-                <p className="text-white">Your Message</p>
+                <p className="text-white text-left">Your Message</p>
                 <textarea className="input px-4" style={{ height: "6rem" }} />
               </Col>
             </Row>
-            <Button className="bg-white text-black">Sumbit</Button>
+            <Button className="bg-white text-black">Submit</Button>
+            <p className="text-white">
+              This site is protected by SPHECHO privacy policy and its terms and
+              conditions
+            </p>
           </div>
         </div>
       </div>
@@ -690,13 +691,18 @@ const Detail = () => {
               SPHECHO Shop is a growing platform for selling online. Be it a
               manufacturer, vendor or supplier, simply sell your products online
               on SPHECHO and become a top e-commerce player with minimum
-              investment. Through a team of experts offering exclusive at
-              support@sphecho.com, SPHECHO focuses on empowering sellers across
-              the globe.
+              investment. Through a team of experts offering exclusive at{" "}
+              <a className="text-danger" href="#">
+                support@sphecho.com
+              </a>
+              , SPHECHO focuses on empowering sellers across the globe.
             </p>
             <p>
-              Selling on SPHECHO is effortless. All you need is to register, and
-              the assigned account manager will get in touch with you.
+              Selling on SPHECHO is effortless. All you need is to{" "}
+              <a className="text-danger" href="/login">
+                register
+              </a>
+              , and the assigned account manager will get in touch with you.
             </p>
             <div className="circle"></div>
             <div className="circle1"></div>
@@ -714,10 +720,7 @@ const NewLetter = () => {
     <div className="mb-5 pb-4">
       <div className="container mb-4">
         <div className="m-auto w-75">
-          <h2
-            className=" text-center mb-4 b-700"
-            style={{ color: "rgb(163, 160, 160)" }}
-          >
+          <h2 className=" text-center" style={{ color: "rgb(163, 160, 160)" }}>
             SUBSCRIBE TO OUR NEWSLETTER
           </h2>
           <Row>
@@ -730,6 +733,9 @@ const NewLetter = () => {
             <Col sm="3" className="p-2 m-auto">
               <Button className="newsLetter-btn">Subscribe</Button>
             </Col>
+            <p className="text-center" style={{ color: "rgb(163, 160, 160)" }}>
+              By subscribing, you consent to us sharing updates with you.
+            </p>
           </Row>
         </div>
       </div>
@@ -740,25 +746,19 @@ const NewLetter = () => {
 const Footer = () => {
   const speechLinks = [
     {
-      title: "SPEECH THERAPY",
+      title: "YOUR  ACCOUNT",
     },
     {
-      title: "EDUCATIONAL CONSULTATION",
+      title: "YOUR ORDERS",
     },
     {
-      title: "OCCUPATIONAL THERAPY",
+      title: "SHIPPING & DELIVERY",
     },
     {
-      title: "BEHAVIORAL & PSYCHOLOGICAL",
+      title: "RETURN & REFUND",
     },
     {
-      title: "PHYSIOTHERAPY",
-    },
-    {
-      title: "COUNSELLING",
-    },
-    {
-      title: "AUDIOLOGY",
+      title: "HELP",
     },
   ];
 
@@ -779,22 +779,16 @@ const Footer = () => {
 
   const aboutUs = [
     {
-      title: "BLOG",
+      title: "RESOURCES",
     },
     {
-      title: "PRIVACY POLICY",
+      title: "SELLING GUIDE",
     },
     {
-      title: "TERMS & CONDITIONS",
+      title: "PRODUCTS IN DEMAND",
     },
     {
-      title: "RENEWAL POLICY",
-    },
-    {
-      title: "CERTIFICATION PROCESS",
-    },
-    {
-      title: "DIGITAL BADGES",
+      title: "FAQs",
     },
   ];
 
@@ -848,15 +842,7 @@ const Footer = () => {
             <div className="navlinks-container-footer p-3">
               <Row>
                 <Col sm="2"></Col>
-                <Col sm="4" className="p-2">
-                  <p className="b-700 mb-2 link-header">DEPARTMENTS</p>
-                  {speechLinks.map((link) => (
-                    <Link key={link.title} className="link b-400" to="/">
-                      {link.title}
-                    </Link>
-                  ))}
-                </Col>
-                <Col sm="3">
+                <Col sm="3" className="p-2">
                   <p className="b-700 mb-2 link-header">USEFUL LINKS</p>
                   {usefullLinks.map((link) => (
                     <Link key={link.title} className="link b-400" to="/">
@@ -865,12 +851,27 @@ const Footer = () => {
                   ))}
                 </Col>
                 <Col sm="3">
-                  <p className="b-700 mb-2 link-header">ABOUT US</p>
+                  <p className="b-700 mb-2 link-header">LET US HELP YOU</p>
+                  {speechLinks.map((link) => (
+                    <Link key={link.title} className="link b-400" to="/">
+                      {link.title}
+                    </Link>
+                  ))}
+                </Col>
+                <Col sm="3">
+                  <p className="b-700 mb-2 link-header">BECOME A SELLER</p>
                   {aboutUs.map((link) => (
                     <Link key={link.title} className="link b-400" to="/">
                       {link.title}
                     </Link>
                   ))}
+                  <br />
+                  <Link className="link b-400" to="/">
+                    -SERVICES
+                  </Link>
+                  <Link className="link b-400" to="/">
+                    ACCOUNT MANAGEMENT
+                  </Link>
                 </Col>
               </Row>
             </div>
