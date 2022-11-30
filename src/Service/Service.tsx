@@ -60,7 +60,6 @@ const NavBar = () => {
       className="nav-bar-container"
       style={{
         position: "absolute",
-        top: "1%",
         left: 0,
         right: 0,
         zIndex: 100,
@@ -68,13 +67,13 @@ const NavBar = () => {
       bg="light"
       expand="lg"
     >
-      <Container>
+      <Container fluid>
         <Navbar.Brand as={Link} to="/">
-          <img src={logo} width="170rem" />
+          <img className="ml-4 pl-4" src={logo} width="170rem" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
+          <Nav className="ms-auto float-right">
             <Nav.Link as={Link} to="/" className="text-white b-700 link-nav">
               HOW IT WORKS
             </Nav.Link>
@@ -124,7 +123,7 @@ const Banner = () => {
       </svg>
 
       <div className="clip-container w-100 position-relative">
-        <Carousel>
+        <Carousel controls={false}>
           <Carousel.Item>
             <img
               className="d-block coursel-img"
@@ -133,7 +132,7 @@ const Banner = () => {
             />
             {/* <Carousel.Caption>
               <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</h5>
             </Carousel.Caption> */}
           </Carousel.Item>
         </Carousel>
@@ -159,7 +158,7 @@ const SmallBanner = () => {
   return (
     <div className="container" style={{ marginTop: "8rem" }}>
       <div className="m-auto w-75 my-4 d-flex flex-column justify-content-center">
-        <h2 className="benefits-title text-landingPrimary bg-300 text-center mb-4 pb-4 text-center">
+        <h2 className="benefits-title text-landingPrimary bg-300 text-center text-center">
           Convenient and affordable therapy with SPHECHO anytime, anywhere
         </h2>
         <button
@@ -182,7 +181,7 @@ const Methods = () => {
   return (
     <div className="container position-relative" style={{ marginTop: "11rem" }}>
       <h1
-        className="benefits-title text-landingPrimary text-center mb-4 pb-4 text-center"
+        className="benefits-title text-landingPrimary text-center text-center"
         style={{ fontWeight: "700" }}
       >
         METHODS OF SERVICE PROVISION AT SPHECHO
@@ -191,19 +190,19 @@ const Methods = () => {
         <Col sm="4">
           <img src={synchornous} width="340rem" className="m-img" />
           <h4 className="text-landingDarkGray text-center b-700 mt-4">
-            SYNCHRONOUS
+            ONLINE
           </h4>
-          <p className="text-landingDarkGray text-center">
-            Synchronous refers to services provided live in real time as 2-way
+          <h5 className="text-landingDarkGray text-center">
+            Online refers to services provided live in real time as 2-way
             conferencing via teletherapy
-          </p>
+          </h5>
         </Col>
         <Col sm="4">
           <img src={hybrid} width="340rem" className="mid-img m-img" />
           <h4 className="text-landingDarkGray text-center b-700 mt-4">
             HYBRID
           </h4>
-          <p className="text-landingDarkGray long-text text-center">
+          <h5 className="text-landingDarkGray long-text text-center">
             Hybrid refers to a combination of synchronous and asynchronous
             approaches as needed. This service consists of alternating inperson
             and teletherapy sessions i.e., based on individual client scenario
@@ -215,20 +214,20 @@ const Methods = () => {
             appointments require problem-focused physical assessments and
             diagnostic work. Subsequent visits can be teletherapy if this seems
             appropriate to the client and the provider
-          </p>
+          </h5>
         </Col>
         <Col sm="4">
           <img src={asynchronous} width="340rem" className="m-img" />
           <h4 className="text-landingDarkGray text-center b-700 mt-4">
-            ASYNCHRONOUS
+            OFFLINE
           </h4>
-          <p className="text-landingDarkGray text-center">
-            Asynchronous refers to services provided to clients in-person
-          </p>
+          <h5 className="text-landingDarkGray text-center">
+            Offline refers to services provided to clients in-person
+          </h5>
         </Col>
       </Row>
       <div className="mid-text m-auto w-75">
-        <p className="text-landingDarkGray" style={{ textAlign: "justify" }}>
+        <h5 className="text-landingDarkGray" style={{ textAlign: "justify" }}>
           Hybrid refers to a combination of synchronous and asynchronous
           approaches as needed. This service consists of alternating inperson
           and teletherapy sessions i.e., based on individual client scenario new
@@ -240,7 +239,7 @@ const Methods = () => {
           appointments require problem-focused physical assessments and
           diagnostic work. Subsequent visits can be teletherapy if this seems
           appropriate to the client and the provider
-        </p>
+        </h5>
       </div>
       <div className="m1c"></div>
       <div className="m2c"></div>
@@ -270,7 +269,7 @@ const TopCategories = () => {
           {hubImgs.map((h) => (
             <Col key={h} sm="3">
               <Link to="">
-                <img src={h} style={{ width: "15rem" }} />
+                <img src={h} style={{ height:'25rem',width: "20rem" }} />
               </Link>
             </Col>
           ))}
@@ -297,9 +296,20 @@ const Sell = () => {
       <div className="w-75 m-auto">
         <Row>
           {sellimgs.map((image, idx) => (
+            <>
             <Col key={idx} sm="4">
-              <img src={image} width="250rem" />
+              <div className="d-flex text-center justify-content-end align-items-center">
+                {idx === 0 ? (
+                  <></>
+                ) : (
+                  <h1 className="px-4 ml-4" style={{ color: "gray" }}>
+                    {"▸"}
+                  </h1>
+                )}
+                <img src={image} width="250rem" />
+              </div>
             </Col>
+          </>
           ))}
         </Row>
       </div>
@@ -316,10 +326,10 @@ const RequestForm = () => {
           <h5 className="b-500 text-white">
             Have any questions? We’d like to hear from you.
           </h5>
-          <p className="text-white">
+          <h5 className="text-white">
             Please fill out the form below and we will do our best to respond
             within 1 business day
-          </p>
+          </h5>
           <div className="input-container">
             <Row>
               <Col sm="6" className="p-3">
@@ -337,11 +347,11 @@ const RequestForm = () => {
             </Row>
             <Row>
               <Col className="p-2">
-                <p className="text-white">Your Message</p>
+                <h5 className="text-white">Your Message</h5>
                 <textarea className="input px-4" style={{ height: "6rem" }} />
               </Col>
             </Row>
-            <Button className="bg-white text-black br-3">Sumbit</Button>
+            <Button className="bg-white text-black br-3">Submit</Button>
           </div>
         </div>
       </div>
@@ -374,20 +384,20 @@ const Detail = () => {
           className="d-flex justify-content-center align-items-center b-500 p-4"
         >
           <div className="position-relative">
-            <h2 className="benefits-title text-landingPrimary bg-600 text-center mb-4 pb-4 text-center">
+            <h2 className="benefits-title text-landingPrimary bg-600 text-center text-center">
               HOW IT WORKS
             </h2>
-            <p className="b-400 px-3" style={{ textAlign: "justify" }}>
+            <h5 className="b-400 px-3" style={{ textAlign: "justify" }}>
               We know how difficult it can be to get a face-to-face therapy
               appointment these days. How expensive it can be. How impossible it
               can feel to squeeze in a visit in your already hectic schedule.
               How unsupported you can feel between sessions. And how you just
               seem to forget all the things your provider told you since that
               last session.
-            </p>
-            <p className="b-400 px-3" style={{ textAlign: "justify" }}>
+            </h5>
+            <h5 className="b-400 px-3" style={{ textAlign: "justify" }}>
               No more. This consultation on your terms.
-            </p>
+            </h5>
             <div className="circle"></div>
             <div className="circle1"></div>
             <div className="circle2"></div>
@@ -413,7 +423,7 @@ const Story = () => {
 
   return (
     <div className="container m-auto" style={{ paddingTop: "8rem" }}>
-      <h2 className="benefits-title text-landingPrimary bg-300 text-center mb-4 pb-4 text-center">
+      <h2 className="benefits-title text-landingPrimary bg-300 text-center text-center">
         SUCCESS STORIES
       </h2>
       <div style={{ marginBottom: "7rem" }}>
@@ -430,12 +440,12 @@ const Story = () => {
                 }}
               >
                 <blockquote>{item.message}</blockquote>
-                <p
+                <h5
                   className="py-2 text-landingPrimary text-center m-auto b-500 story-by"
                   style={{ fontSize: "1.5rem", width: "45%" }}
                 >
                   {item.by}
-                </p>
+                </h5>
                 <button className="px-4 py-2 mt-2 br-5 more-story-btn">
                   More Success Stories
                 </button>
@@ -505,7 +515,7 @@ const Footer = () => {
       title: "PROVIDERS",
     },
     {
-      title: "SPHECHO SERVICE",
+      title: "SPHECHO LEARN",
     },
     {
       title: "SPHECHO SHOP",
@@ -526,13 +536,7 @@ const Footer = () => {
       title: "TERMS & CONDITIONS",
     },
     {
-      title: "RENEWAL POLICY",
-    },
-    {
-      title: "CERTIFICATION PROCESS",
-    },
-    {
-      title: "DIGITAL BADGES",
+      title: "FAQs",
     },
   ];
 
@@ -587,7 +591,7 @@ const Footer = () => {
               <Row>
                 <Col sm="2"></Col>
                 <Col sm="4" className="p-2">
-                  <p className="b-700 mb-2 link-header">DEPARTMENTS</p>
+                  <h5 className="b-700 mb-2 link-header">DEPARTMENTS</h5>
                   {speechLinks.map((link) => (
                     <Link key={link.title} className="link b-400" to="/">
                       {link.title}
@@ -595,7 +599,7 @@ const Footer = () => {
                   ))}
                 </Col>
                 <Col sm="3">
-                  <p className="b-700 mb-2 link-header">USEFUL LINKS</p>
+                  <h5 className="b-700 mb-2 link-header">USEFUL LINKS</h5>
                   {usefullLinks.map((link) => (
                     <Link key={link.title} className="link b-400" to="/">
                       {link.title}
@@ -603,7 +607,7 @@ const Footer = () => {
                   ))}
                 </Col>
                 <Col sm="3">
-                  <p className="b-700 mb-2 link-header">ABOUT US</p>
+                  <h5 className="b-700 mb-2 link-header">ABOUT US</h5>
                   {aboutUs.map((link) => (
                     <Link key={link.title} className="link b-400" to="/">
                       {link.title}
