@@ -241,11 +241,11 @@ const Methods = () => {
           appropriate to the client and the provider
         </h5>
       </div>
-      <div className="m1c"></div>
-      <div className="m2c"></div>
-      <div className="m3c"></div>
-      <div className="m4c"></div>
-      <div className="m5c"></div>
+      <div className="m1c cirlceVirbrate"></div>
+      <div className="m2c cirlceVirbrate2"></div>
+      <div className="m3c cirlceVirbrate3"></div>
+      <div className="m4c cirlceVirbrate"></div>
+      <div className="m5c cirlceVirbrate2"></div>
     </div>
   );
 };
@@ -269,7 +269,7 @@ const TopCategories = () => {
           {hubImgs.map((h) => (
             <Col key={h} sm="3">
               <Link to="">
-                <img src={h} style={{ height:'25rem',width: "20rem" }} />
+                <img src={h} style={{ height: "25rem", width: "20rem" }} />
               </Link>
             </Col>
           ))}
@@ -297,19 +297,19 @@ const Sell = () => {
         <Row>
           {sellimgs.map((image, idx) => (
             <>
-            <Col key={idx} sm="4">
-              <div className="d-flex text-center justify-content-end align-items-center">
-                {idx === 0 ? (
-                  <></>
-                ) : (
-                  <h1 className="px-4 ml-4" style={{ color: "gray" }}>
-                    {"▸"}
-                  </h1>
-                )}
-                <img src={image} width="250rem" />
-              </div>
-            </Col>
-          </>
+              <Col key={idx} sm="4">
+                <div className="d-flex text-center justify-content-end align-items-center">
+                  {idx === 0 ? (
+                    <></>
+                  ) : (
+                    <h1 className="px-4 ml-4" style={{ color: "gray" }}>
+                      {"▸"}
+                    </h1>
+                  )}
+                  <img src={image} width="250rem" />
+                </div>
+              </Col>
+            </>
           ))}
         </Row>
       </div>
@@ -398,10 +398,10 @@ const Detail = () => {
             <h5 className="b-400 px-3" style={{ textAlign: "justify" }}>
               No more. This consultation on your terms.
             </h5>
-            <div className="circle"></div>
-            <div className="circle1"></div>
-            <div className="circle2"></div>
-            <div className="circle3"></div>
+            <div className="circle cirlceVirbrate"></div>
+            <div className="circle1 cirlceVirbrate2"></div>
+            <div className="circle2 cirlceVirbrate3"></div>
+            <div className="circle3 cirlceVirbrate"></div>
           </div>
         </Col>
       </Row>
