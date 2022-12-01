@@ -704,10 +704,10 @@ const Detail = () => {
               </a>
               , and the assigned account manager will get in touch with you.
             </p>
-            <div className="circle"></div>
-            <div className="circle1"></div>
-            <div className="circle2"></div>
-            <div className="circle3"></div>
+            <div className="circle cirlceVirbrate"></div>
+            <div className="circle1 cirlceVirbrate2"></div>
+            <div className="circle2 cirlceVirbrate3"></div>
+            <div className="circle3 cirlceVirbrate"></div>
           </div>
         </Col>
       </Row>
