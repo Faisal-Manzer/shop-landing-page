@@ -11,6 +11,8 @@ import Navbar from "react-bootstrap/Navbar";
 // import improve from "../assets/improve.png";
 // import noImage from "../assets/no-img.png";
 import landing from "../assets/landing.png";
+import s1 from "../assets/s1.jpg";
+import s2 from "../assets/s2.jpg";
 import logo from "../assets/sphechoLogo.png";
 import colorLogo from "../assets/colorlogo.png";
 // store
@@ -134,15 +136,10 @@ const Banner = () => {
       <div className="clip-container w-100 position-relative">
         <Carousel controls={false}>
           <Carousel.Item>
-            <img
-              className="d-block coursel-img"
-              src={landing}
-              alt="First slide"
-            />
-            {/* <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption> */}
+            <img className="d-block coursel-img" src={s1} alt="First slide" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block coursel-img" src={s2} alt="second slide" />
           </Carousel.Item>
         </Carousel>
         <div className="banner-title">
