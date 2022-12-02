@@ -26,6 +26,10 @@ import synchornous from "../assets/synchornous.png";
 import hybrid from "../assets/hybrid.png";
 import asynchronous from "../assets/asynchronous.png";
 
+//landing pages
+import l1 from "../assets/l1.jpg";
+import l2 from "../assets/l2.jpg";
+
 //
 import apple from "../assets/apple.png";
 import fb from "../assets/fb.png";
@@ -125,15 +129,10 @@ const Banner = () => {
       <div className="clip-container w-100 position-relative">
         <Carousel controls={false}>
           <Carousel.Item>
-            <img
-              className="d-block coursel-img"
-              src={landing}
-              alt="First slide"
-            />
-            {/* <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</h5>
-            </Carousel.Caption> */}
+            <img className="d-block coursel-img" src={l1} alt="First slide" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block coursel-img" src={l2} alt="second slide" />
           </Carousel.Item>
         </Carousel>
         <div className="banner-title">
