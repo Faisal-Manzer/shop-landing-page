@@ -68,7 +68,6 @@ const NavBar = () => {
         right: 0,
         zIndex: 100,
       }}
-      bg="light"
       expand="lg"
     >
       <Container fluid>
@@ -511,16 +510,20 @@ const Footer = () => {
 
   const usefullLinks = [
     {
-      title: "PROVIDERS",
+      title: 'PROVIDERS',
+      link: '',
     },
     {
-      title: "SPHECHO LEARN",
+      title: 'SPHECHO LEARN',
+      link: 'http://sphecholms.metahos.com',
     },
     {
-      title: "SPHECHO SHOP",
+      title: 'SPHECHO SHOP',
+      link: 'http://sphecho-shop.metahos.com',
     },
     {
-      title: "SPHECHO SCHOLAR",
+      title: 'SPHECHO SCHOLAR',
+      link: '',
     },
   ];
 
@@ -592,17 +595,17 @@ const Footer = () => {
                 <Col sm="4" className="p-2">
                   <h5 className="b-700 mb-2 link-header">DEPARTMENTS</h5>
                   {speechLinks.map((link) => (
-                    <Link key={link.title} className="link b-400" to="/">
+                    <Link key={link.title} className="link b-400" to="/department">
                       {link.title}
                     </Link>
                   ))}
                 </Col>
                 <Col sm="3">
                   <h5 className="b-700 mb-2 link-header">USEFUL LINKS</h5>
-                  {usefullLinks.map((link) => (
-                    <Link key={link.title} className="link b-400" to="/">
-                      {link.title}
-                    </Link>
+                  {usefullLinks.map((l) => (
+                    <a key={l.title} className="link b-400" href={l.link}>
+                      {l.title}
+                    </a>
                   ))}
                 </Col>
                 <Col sm="3">
