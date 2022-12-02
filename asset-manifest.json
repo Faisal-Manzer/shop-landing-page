@@ -1,13 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.5bdec1df.css",
-    "main.js": "/static/js/main.ce7a1e7d.js",
+    "main.css": "/static/css/main.24e362cf.css",
+    "main.js": "/static/js/main.05518815.js",
     "static/js/787.b7488fda.chunk.js": "/static/js/787.b7488fda.chunk.js",
+    "static/media/s2.jpg": "/static/media/s2.314d09c7f006ab07271d.jpg",
+    "static/media/s1.jpg": "/static/media/s1.6958ecd8977e04510f56.jpg",
+    "static/media/contactbg.png": "/static/media/contactbg.2446cc17c06ea2c54f02.png",
     "static/media/colorlogo.png": "/static/media/colorlogo.3003400751dd53e6dd05.png",
+    "static/media/cshop.png": "/static/media/cshop.ec1a4ac07bbc1372b19f.png",
     "static/media/play.png": "/static/media/play.cdfb8f19b3abfad04123.png",
-    "static/media/landing.png": "/static/media/landing.43f6a4112bfaa826ac8d.png",
     "static/media/therapy.png": "/static/media/therapy.95334dfd0e5b9c95df78.png",
+    "static/media/BwSeidoRoundDEMO-BlackItalic.ttf": "/static/media/BwSeidoRoundDEMO-BlackItalic.27a524e2f714b3d9b2b9.ttf",
+    "static/media/BwSeidoRoundDEMO-Bold.ttf": "/static/media/BwSeidoRoundDEMO-Bold.20ed0c31710cfd536d49.ttf",
+    "static/media/BwSeidoRoundDEMO-Medium.ttf": "/static/media/BwSeidoRoundDEMO-Medium.eae09c07775a896a1650.ttf",
+    "static/media/BwSeidoRoundDEMO-Regular.ttf": "/static/media/BwSeidoRoundDEMO-Regular.66ae481c6088b4f1fe7f.ttf",
+    "static/media/BwSeidoRoundDEMO-Black.ttf": "/static/media/BwSeidoRoundDEMO-Black.02e89e6e0cf967bd9ef6.ttf",
     "static/media/hearing.png": "/static/media/hearing.6e6282af5a1ef566095a.png",
+    "static/media/BwSeidoRoundDEMO-Light.ttf": "/static/media/BwSeidoRoundDEMO-Light.84caaa6023fe15bd350f.ttf",
+    "static/media/BwSeidoRoundDEMO-Thin.ttf": "/static/media/BwSeidoRoundDEMO-Thin.ffaeadcd10ac03ba72c4.ttf",
+    "static/media/BwSeidoRoundDEMO-BlackItalic.woff": "/static/media/BwSeidoRoundDEMO-BlackItalic.1b6c69e681389efca9d5.woff",
+    "static/media/BwSeidoRoundDEMO-Bold.woff": "/static/media/BwSeidoRoundDEMO-Bold.58592005a65ebea71a7f.woff",
+    "static/media/BwSeidoRoundDEMO-Medium.woff": "/static/media/BwSeidoRoundDEMO-Medium.a7d13f614d63eaed93d5.woff",
+    "static/media/BwSeidoRoundDEMO-Regular.woff": "/static/media/BwSeidoRoundDEMO-Regular.1a27d573026a209031b0.woff",
+    "static/media/BwSeidoRoundDEMO-Light.woff": "/static/media/BwSeidoRoundDEMO-Light.00a061f0daa326974518.woff",
+    "static/media/BwSeidoRoundDEMO-Black.woff": "/static/media/BwSeidoRoundDEMO-Black.3944e511c01988133391.woff",
+    "static/media/BwSeidoRoundDEMO-Thin.woff": "/static/media/BwSeidoRoundDEMO-Thin.3f4d6966a468285e4644.woff",
     "static/media/kit.png": "/static/media/kit.022877b45b66963a563f.png",
     "static/media/sphechoLogo.png": "/static/media/sphechoLogo.d9ea78e87dba7d3b5b15.png",
     "static/media/playstore.png": "/static/media/playstore.6e268fd133e538679994.png",
@@ -19,12 +36,12 @@
     "static/media/growth.png": "/static/media/growth.4da9132f79d4ab10d77e.png",
     "static/media/bundles.png": "/static/media/bundles.b6743516e057fb143c29.png",
     "index.html": "/index.html",
-    "main.5bdec1df.css.map": "/static/css/main.5bdec1df.css.map",
-    "main.ce7a1e7d.js.map": "/static/js/main.ce7a1e7d.js.map",
+    "main.24e362cf.css.map": "/static/css/main.24e362cf.css.map",
+    "main.05518815.js.map": "/static/js/main.05518815.js.map",
     "787.b7488fda.chunk.js.map": "/static/js/787.b7488fda.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5bdec1df.css",
-    "static/js/main.ce7a1e7d.js"
+    "static/css/main.24e362cf.css",
+    "static/js/main.05518815.js"
   ]
 }
