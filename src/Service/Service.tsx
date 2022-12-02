@@ -81,7 +81,7 @@ const NavBar = () => {
             <Nav.Link as={Link} to="/" className="text-white b-700 link-nav">
               HOW IT WORKS
             </Nav.Link>
-            <Nav.Link as={Link} to="/" className="text-white b-700 link-nav">
+            <Nav.Link as={Link} to="/department" className="text-white b-700 link-nav">
               DEPARTMENTS
             </Nav.Link>
             <Nav.Link as={Link} to="/" className="text-white b-700 link-nav">
