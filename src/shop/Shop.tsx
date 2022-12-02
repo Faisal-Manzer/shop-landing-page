@@ -87,9 +87,9 @@ const NavBar = () => {
         </div>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/" className="text-white b-700 link-nav">
-              STORE
-            </Nav.Link>
+            <a href="https://qishcommerce.metahos.com" className="text-white b-700 link-nav mt-2" style={{textDecoration:'none'}} target="_blank">
+            STORE
+            </a>
             <Nav.Link as={Link} to="/" className="text-white b-700 link-nav">
               RESOURCE HUB
             </Nav.Link>
@@ -529,16 +529,20 @@ const Footer = () => {
 
   const usefullLinks = [
     {
-      title: "PROVIDERS",
+      title: 'PROVIDERS',
+      link: '',
     },
     {
-      title: "SPHECHO SERVICE",
+      title: 'SPHECHO SERVICE',
+      link: 'http://sphecho-services.metahos.com',
     },
     {
-      title: "SPHECHO SHOP",
+      title: 'SPHECHO LEARN',
+      link: 'http://sphecholms.metahos.com',
     },
     {
-      title: "SPHECHO SCHOLAR",
+      title: 'SPHECHO SCHOLAR',
+      link: '',
     },
   ];
 
@@ -609,10 +613,10 @@ const Footer = () => {
                 <Col sm="2"></Col>
                 <Col sm="3" className="p-2">
                   <p className="b-700 mb-2 link-header">USEFUL LINKS</p>
-                  {usefullLinks.map((link) => (
-                    <Link key={link.title} className="link b-400" to="/">
-                      {link.title}
-                    </Link>
+                  {usefullLinks.map((l) => (
+                    <a key={l.title} className="link b-400" href={l.link}>
+                      {l.title}
+                    </a>
                   ))}
                 </Col>
                 <Col sm="3">
@@ -625,10 +629,10 @@ const Footer = () => {
                 </Col>
                 <Col sm="3">
                   <p className="b-700 mb-2 link-header">BECOME A SELLER</p>
-                  {aboutUs.map((link) => (
-                    <Link key={link.title} className="link b-400" to="/">
-                      {link.title}
-                    </Link>
+                  {aboutUs.map((l) => (
+                                        <a key={l.title} className="link b-400" href="https://qishcommerce.metahos.com">
+                                        {l.title}
+                                      </a>
                   ))}
                   <br />
                   <Link className="link b-400" to="/">
