@@ -351,6 +351,7 @@ const RequestForm = () => {
             </Row>
             <Button className="bg-white text-black br-3">Submit</Button>
           </div>
+          <h6 className="text-white mt-1">This site is protected by SPHECHO privacy policy and its terms and conditions.</h6>
         </div>
       </div>
     </div>
@@ -477,6 +478,7 @@ const NewLetter = () => {
               <Button className="newsLetter-btn">Subscribe</Button>
             </Col>
           </Row>
+          <h6 className="text-center" style={{color:'gray'}}>By subscribing, you consent to us sharing updates with you.</h6>
         </div>
       </div>
     </div>
