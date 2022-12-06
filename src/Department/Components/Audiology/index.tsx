@@ -10,8 +10,8 @@ const Audiology = () => {
                     <h2 style={{ fontWeight: 'bold' }}>Audiology</h2>
                 </div>
 
-                <div className="row d-flex" style={{ padding: '0', height: '400px', borderRadius: '30px', boxShadow: `rgba(0, 0, 0, 0.35) 0px 5px 15px` }}>
-                    <div className="d-flex flex-column align-items-center justify-content-center" style={{ flex: '1' }}>
+                <div className="row" style={{ padding: '0',  borderRadius: '30px', boxShadow: `rgba(0, 0, 0, 0.35) 0px 5px 15px` }}>
+                    <div className="col-md-6" >
                         <div style={{ padding: '60px' }}>
                             <h4 style={{ marginBottom: '30px' }}>
                                 <b>Welcome to our online
@@ -28,7 +28,7 @@ const Audiology = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="" style={{ flex: '1' }}>
+                    <div className="col-md-6" >
                         <img src={l2} alt="" style={{ borderRadius: '0px 30px 30px 0px', width: '100%', height: '100%', objectFit: 'cover' }} />
                     </div>
                 </div>
