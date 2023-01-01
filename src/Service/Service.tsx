@@ -31,6 +31,8 @@ import asynchronous from "../assets/asynchronous.png";
 import l1 from "../assets/l1.jpg";
 import l2 from "../assets/l2.jpg";
 
+import research from "../assets/research.jpg";
+
 //
 import apple from "../assets/apple.png";
 import fb from "../assets/fb.png";
@@ -276,11 +278,11 @@ const TopCategories = () => {
         className="m-auto"
         style={{ background: "#F1F0EE", marginTop: "-10%", zIndex: 19 }}
       >
-        <Row className="container m-auto py-2" style={{ width: "80%" }}>
+        <Row className="container m-auto py-2" style={{ width: "90%" }}>
           {hubImgs.map((h) => (
             <Col key={h} sm="3">
               <Link to="">
-                <img src={h} style={{ height: "25rem", width: "20rem" }} />
+                <img src={h} style={{ width: "18rem" }} />
               </Link>
             </Col>
           ))}
