@@ -80,7 +80,11 @@ const NavBar = () => {
             <Nav.Link as={Link} to="/" className="text-white b-700 link-nav">
               HOW IT WORKS
             </Nav.Link>
-            <Nav.Link as={Link} to="/department" className="text-white b-700 link-nav">
+            <Nav.Link
+              as={Link}
+              to="/department"
+              className="text-white b-700 link-nav"
+            >
               DEPARTMENTS
             </Nav.Link>
             <Nav.Link as={Link} to="/" className="text-white b-700 link-nav">
@@ -351,7 +355,10 @@ const RequestForm = () => {
             </Row>
             <Button className="bg-white text-black br-3">Submit</Button>
           </div>
-          <h6 className="text-white mt-1">This site is protected by SPHECHO privacy policy and its terms and conditions.</h6>
+          <h6 className="text-white mt-1">
+            This site is protected by SPHECHO privacy policy and its terms and
+            conditions.
+          </h6>
         </div>
       </div>
     </div>
@@ -478,7 +485,9 @@ const NewLetter = () => {
               <Button className="newsLetter-btn">Subscribe</Button>
             </Col>
           </Row>
-          <h6 className="text-center" style={{color:'gray'}}>By subscribing, you consent to us sharing updates with you.</h6>
+          <h6 className="text-center" style={{ color: "gray" }}>
+            By subscribing, you consent to us sharing updates with you.
+          </h6>
         </div>
       </div>
     </div>
@@ -489,43 +498,50 @@ const Footer = () => {
   const speechLinks = [
     {
       title: "SPEECH THERAPY",
+      href: "/department#speech",
     },
     {
       title: "EDUCATIONAL CONSULTATION",
+      href: "/department#education",
     },
     {
       title: "OCCUPATIONAL THERAPY",
+      href: "/department#accupational",
     },
     {
       title: "BEHAVIORAL & PSYCHOLOGICAL",
+      href: "/department#behavioral",
     },
     {
       title: "PHYSIOTHERAPY",
+      href: "/department#physiotherapy",
     },
     {
       title: "COUNSELLING",
+      href: "/department#counselling",
     },
     {
       title: "AUDIOLOGY",
+      href: "/department#audiology",
     },
   ];
 
   const usefullLinks = [
     {
-      title: 'PROVIDERS',
-      link: '',
+      title: "PROVIDERS",
+      link: "",
     },
     {
-      title: 'SPHECHO LEARN',
-      link: 'http://sphecholms.metahos.com',
+      title: "SPHECHO LEARN",
+      link: "http://sphecholms.metahos.com",
     },
     {
-      title: 'SPHECHO SHOP',
-      link: 'http://sphecho-shop.metahos.com',
+      title: "SPHECHO SHOP",
+      link: "http://sphecho-shop.metahos.com",
     },
     {
-      title: 'SPHECHO SCHOLAR',
-      link: '',
+      title: "SPHECHO SCHOLAR",
+      link: "",
     },
   ];
 
@@ -597,9 +613,9 @@ const Footer = () => {
                 <Col sm="4" className="p-2">
                   <h5 className="b-700 mb-2 link-header">DEPARTMENTS</h5>
                   {speechLinks.map((link) => (
-                    <Link key={link.title} className="link b-400" to="/department">
+                    <a key={link.title} className="link b-400" href={link.href}>
                       {link.title}
-                    </Link>
+                    </a>
                   ))}
                 </Col>
                 <Col sm="3">
