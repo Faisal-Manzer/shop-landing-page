@@ -13,6 +13,28 @@ import Audiology from "./Components/Audiology";
 import BehavioralTherapy from "./Components/BehavioralTherapy";
 
 const Department = () => {
+  React.useEffect(() => {
+    const { pathname } = window.location;
+    const currentSection = pathname.split("/")[2];
+    const a = document.createElement("a");
+    if (currentSection === "speech") {
+      a.href = "#speech";
+    } else if (currentSection === "education") {
+      a.href = "#education";
+    } else if (currentSection === "accupational") {
+      a.href = "#accupational";
+    } else if (currentSection === "behavioral") {
+      a.href = "#behavioral";
+    } else if (currentSection === "physiotherapy") {
+      a.href = "#physiotherapy";
+    } else if (currentSection === "counselling") {
+      a.href = "#counselling";
+    } else if (currentSection === "audiology") {
+      a.href = "#audiology";
+    }
+    a.click();
+  }, []);
+
   return (
     <div className="container">
       <Departments />
@@ -54,6 +76,7 @@ const SpeechTherapy = () => {
           style={{ width: "100%", height: "100%", borderRadius: "20px" }}
         />
       </div>
+
       <div
         className="speechTherapy__info col-sm-6 p-3"
         style={{ fontSize: "14px", fontWeight: "500" }}
@@ -164,10 +187,7 @@ const SpeechTherapy = () => {
 const TherapyFees = ({ title }: any) => {
   return (
     <div>
-      <div
-        className="row therapyFees"
-        style={{ borderRadius: "40px", backgroundColor: "#e0d3e3" }}
-      >
+      <div className="row therapyFees" style={{ borderRadius: "40px" }}>
         <div
           className="text-center py-3"
           style={{

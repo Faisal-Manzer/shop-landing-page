@@ -14,10 +14,8 @@ function App() {
           <Route index element={<Service />} />
         </Route>
         <Route path="/department">
-          <Route index element={<Department />} />
+          <Route path="*" element={<Department />} />
         </Route>
-          
-        
       </Routes>
     </Router>
   );
