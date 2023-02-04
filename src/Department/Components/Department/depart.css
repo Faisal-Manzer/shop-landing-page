@@ -1,0 +1,11 @@
+@media only screen and (max-width: 768px) {
+  .deparment-section {
+    display: flex;
+    flex-direction: column !important;
+  }
+  .department-row {
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+  }
+}

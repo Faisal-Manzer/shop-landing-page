@@ -1,32 +1,289 @@
-import React from 'react'
+import React from "react";
 
 // images
-import SpeechTherapy from './images/box-speech.png'
-import EduTherapy from './images/box-edu.png'
-import OccupTherapy from './images/box-occup.png'
-import BPTherapy from './images/box-b&p.png'
-import PhysioTherapy from './images/box-physio.png'
-import CounsellTherapy from './images/box-counsell.png'
-import AudioTherapy from './images/box-audio.png'
+import "./depart.css";
+import brain from "../../../assets/Brain.png";
+import brainNote from "../../../assets/brainNote.png";
+import chat from "../../../assets/chat.png";
+import ear from "../../../assets/ear.png";
+import physio from "../../../assets/Physiotherapy.png";
+import scholor from "../../../assets/scholor.png";
+import writing from "../../../assets/Writing.png";
 
-const data = [SpeechTherapy, EduTherapy, OccupTherapy, BPTherapy, PhysioTherapy, CounsellTherapy, AudioTherapy]
 const Department = () => {
-    return (
-        <div className='my-4 text-center'>
-            <h2 style={{ fontWeight: 'bold' }}>Departments</h2>
-            <div className="row my-4 d-flex align-items-center justify-content-center" style={{backgroundColor:'#C2ABCF', padding:'20px', borderRadius:'20px'}}>
-                {
-                    data.map((item) => (
-                        <div className="col-sm-3" style={{padding:'10px'}}>
-                            <div>
-                                <img style={{width:'100%', height:'100%'}} src={item} alt="" />
-                            </div>
-                        </div>
-                    ))
-                }
-            </div>
+  return (
+    <section style={{ margin: "auto" }}>
+      <div style={{ position: "relative" }}>
+        <div className="section-title">
+          <h2
+            style={{
+              textAlign: "center",
+              fontWeight: "bold",
+              marginTop: "50px",
+              marginBottom: "3rem",
+            }}
+          >
+            DEPARTMENTS
+          </h2>
         </div>
-    )
-}
+        <div
+          className="container-fluid deparment-section"
+          style={{
+            backgroundColor: "#ede9e8",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "2rem 1rem",
+            borderRadius: "1rem",
+          }}
+        >
+          <div className="d-flex row flex-wrap flex-row justify-content-center align-items-center">
+            <div className="d-flex flex-row justify-content-center department-row">
+              <a
+                className="col-sm-3 py-3 my-3"
+                href="#speech"
+                style={{
+                  margin: "0px 10px",
+                  backgroundColor: "white",
+                  width: "14rem",
+                  height: "9rem",
+                  borderRadius: "20px",
+                  boxShadow: `rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px`,
+                  textDecoration: "none",
+                }}
+              >
+                <div className="d-flex flex-wrap flex-column justify-content-center align-items-center">
+                  <img src={chat} alt="" style={{ width: "4rem" }} />
+
+                  <div className="card__info">
+                    <h3
+                      className="text-center my-2"
+                      style={{ fontSize: "15px" }}
+                    >
+                      Speech Therapy
+                    </h3>
+                    <h5
+                      className="text-center my-2"
+                      style={{ fontSize: "10px", color: "grey" }}
+                    >
+                      Read More
+                    </h5>
+                  </div>
+                </div>
+              </a>
+              <a
+                href="#education"
+                className="col-sm-3 py-3 my-3"
+                style={{
+                  margin: "0px 10px",
+                  backgroundColor: "white",
+                  width: "14rem",
+                  height: "9rem",
+                  borderRadius: "20px",
+                  boxShadow: `rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px`,
+                  textDecoration: "none",
+                }}
+              >
+                <div className="d-flex flex-wrap flex-column justify-content-center align-items-center">
+                  <div
+                    className="icon my-2"
+                    style={{ width: "80px", height: "50px" }}
+                  >
+                    <img src={scholor} alt="" style={{ width: "4rem" }} />
+                  </div>
+                  <div className="card__info">
+                    <h3
+                      className="text-center my-2"
+                      style={{ fontSize: "15px" }}
+                    >
+                      Educational Therapy
+                    </h3>
+                    <h5
+                      className="text-center my-2"
+                      style={{ fontSize: "10px", color: "grey" }}
+                    >
+                      Read More
+                    </h5>
+                  </div>
+                </div>
+              </a>
+              <a
+                href="#behavioral"
+                className="col-sm-3 py-3 my-3"
+                style={{
+                  margin: "0px 10px",
+                  backgroundColor: "white",
+                  width: "14rem",
+                  height: "9rem",
+                  borderRadius: "20px",
+                  boxShadow: `rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px`,
+                  textDecoration: "none",
+                }}
+              >
+                <div className="d-flex flex-wrap flex-column justify-content-center align-items-center">
+                  <div
+                    className="icon my-2"
+                    style={{ width: "80px", height: "45px" }}
+                  >
+                    <img src={brainNote} alt="" style={{ width: "3rem" }} />
+                  </div>
+                  <div className="card__info">
+                    <h3
+                      className="text-center my-2"
+                      style={{ fontSize: "14px" }}
+                    >
+                      Behavioral & Psychology Therapy
+                    </h3>
+                    <h5
+                      className="text-center my-2"
+                      style={{ fontSize: "10px", color: "grey" }}
+                    >
+                      Read More
+                    </h5>
+                  </div>
+                </div>
+              </a>
+              <a
+                href="#accupational"
+                className="col-sm-3 py-3 my-3"
+                style={{
+                  margin: "0px 10px",
+                  backgroundColor: "white",
+                  width: "14rem",
+                  height: "9rem",
+                  borderRadius: "20px",
+                  boxShadow: `rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px`,
+                  textDecoration: "none",
+                }}
+              >
+                <div className="d-flex flex-wrap flex-column justify-content-center align-items-center">
+                  <div
+                    className="icon my-2"
+                    style={{ width: "80px", height: "50px" }}
+                  >
+                    <img src={writing} alt="" style={{ width: "4rem" }} />
+                  </div>
+                  <div className="card__info">
+                    <h3
+                      className="text-center my-2"
+                      style={{ fontSize: "15px" }}
+                    >
+                      Occupational Therapy
+                    </h3>
+                    <h5
+                      className="text-center my-2"
+                      style={{ fontSize: "10px", color: "grey" }}
+                    >
+                      Read More
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <a
+              href="#physiotherapy"
+              className="col-sm-3 py-3 my-3"
+              style={{
+                margin: "0px 10px",
+                backgroundColor: "white",
+                width: "14rem",
+                height: "9rem",
+                borderRadius: "20px",
+                boxShadow: `rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px`,
+                textDecoration: "none",
+              }}
+            >
+              <div className="d-flex flex-wrap flex-column justify-content-center align-items-center">
+                <div
+                  className="icon my-2"
+                  style={{ width: "80px", height: "50px" }}
+                >
+                  <img src={physio} alt="" style={{ width: "4rem" }} />
+                </div>
+                <div className="card__info">
+                  <h3 className="text-center my-2" style={{ fontSize: "15px" }}>
+                    Physiotherapy Therapy
+                  </h3>
+                  <h5
+                    className="text-center my-2"
+                    style={{ fontSize: "10px", color: "grey" }}
+                  >
+                    Read More
+                  </h5>
+                </div>{" "}
+              </div>
+            </a>
+            <a
+              href="#counselling"
+              className="col-sm-3 py-3 my-3"
+              style={{
+                margin: "0px 10px",
+                backgroundColor: "white",
+                width: "14rem",
+                height: "9rem",
+                borderRadius: "20px",
+                boxShadow: `rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px`,
+                textDecoration: "none",
+              }}
+            >
+              <div className="d-flex flex-wrap flex-column justify-content-center align-items-center">
+                <div
+                  className="icon my-2"
+                  style={{ width: "80px", height: "50px" }}
+                >
+                  <img src={brain} alt="" style={{ width: "3rem" }} />
+                </div>
+                <div className="card__info">
+                  <h3 className="text-center my-2" style={{ fontSize: "15px" }}>
+                    Counselling Therapy
+                  </h3>
+                  <h5
+                    className="text-center my-2"
+                    style={{ fontSize: "10px", color: "grey" }}
+                  >
+                    Read More
+                  </h5>
+                </div>
+              </div>
+            </a>
+            <a
+              href="#audiology"
+              className="col-sm-3 py-3 my-3"
+              style={{
+                margin: "0px 10px",
+                backgroundColor: "white",
+                width: "14rem",
+                height: "9rem",
+                borderRadius: "20px",
+                boxShadow: `rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px`,
+                textDecoration: "none",
+              }}
+            >
+              <div className="d-flex flex-wrap flex-column justify-content-center align-items-center">
+                <div
+                  className="icon my-2"
+                  style={{ width: "80px", height: "50px" }}
+                >
+                  <img src={ear} alt="" style={{ width: "2.8rem" }} />
+                </div>
+                <div className="card__info">
+                  <h3 className="text-center my-2" style={{ fontSize: "15px" }}>
+                    Audiology Therapy
+                  </h3>
+                  <h5
+                    className="text-center my-2"
+                    style={{ fontSize: "10px", color: "grey" }}
+                  >
+                    Read More
+                  </h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default Department;

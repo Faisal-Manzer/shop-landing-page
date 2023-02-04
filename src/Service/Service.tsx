@@ -497,31 +497,31 @@ const NewLetter = () => {
 const Footer = () => {
   const speechLinks = [
     {
-      title: "SPEECH THERAPY",
+      title: "Speech Therapy",
       href: "/department/speech",
     },
     {
-      title: "EDUCATIONAL CONSULTATION",
+      title: "Educational Consultation",
       href: "/department/education",
     },
     {
-      title: "OCCUPATIONAL THERAPY",
+      title: "Occupational Therapy",
       href: "/department/accupational",
     },
     {
-      title: "BEHAVIORAL & PSYCHOLOGICAL",
+      title: "Behavioral & Psychological",
       href: "/department/behavioral",
     },
     {
-      title: "PHYSIOTHERAPY",
+      title: "Physiotherapy",
       href: "/department/physiotherapy",
     },
     {
-      title: "COUNSELLING",
+      title: "Counselling",
       href: "/department/counselling",
     },
     {
-      title: "AUDIOLOGY",
+      title: "Audiology",
       href: "/department/audiology",
     },
   ];
