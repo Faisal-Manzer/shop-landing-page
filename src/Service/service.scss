@@ -148,11 +148,7 @@ $primary: #662d91;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: linear-gradient(
-    to bottom right,
-    #662d91 20%,
-    rgba(255, 255, 255, 0.632) 70%
-  );
+  background-image: radial-gradient(rgba(255, 255, 255, 0.521) 16%, #662d91);
 }
 
 //shop
@@ -535,5 +531,41 @@ footer {
   }
   100% {
     transform: translate(0px, 0px);
+  }
+}
+
+.wave-container-banner {
+  height: 24rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.wave {
+  background: url("./wave.svg") repeat-x;
+  position: absolute;
+  width: 6400px;
+  height: 198px;
+  bottom: 0;
+  animation: wave 15s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .wave-container-banner {
+    height: 0rem;
+  }
+  .wave {
+    height: 140px;
   }
 }
