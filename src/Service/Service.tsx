@@ -5,6 +5,7 @@ import Carousel from "react-bootstrap/Carousel";
 import Accordion from "react-bootstrap/Accordion";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import axios from "axios";
 
 import landing from "../assets/landing.png";
 import logo from "../assets/sphechoLogo.png";
@@ -320,6 +321,52 @@ const Sell = () => {
 };
 
 const RequestForm = () => {
+  const [pname, setPname] = React.useState("");
+  const [contact, setContact] = React.useState("");
+  const [message, setMessage] = React.useState("");
+  const [subject, setSubject] = React.useState("");
+  const [disbaled, setDisabled] = React.useState(false);
+
+  const [sucessMessage, setSuccessMessage] = React.useState("");
+
+  const clearFields = () => {
+    setPname("");
+    setContact("");
+    setMessage("");
+    setSubject("");
+  };
+
+  const clearMmessage = () => {
+    setTimeout(() => {
+      setSuccessMessage("");
+    }, 7000);
+  };
+
+  const handleSubmit = () => {
+    setDisabled(true);
+    axios
+      .post("https://qish.metahos.com/leads/add", {
+        callType: "contact-us",
+        contact,
+        subject,
+        message,
+        pname,
+        source: "service",
+      })
+      .then(() => {
+        setDisabled(false);
+        clearFields();
+        setSuccessMessage("Your request successfully submitted.");
+        clearMmessage();
+      })
+      .catch((err: any) => {
+        setSuccessMessage("Network Error: Please try again later");
+        clearMmessage();
+        setDisabled(false);
+        console.log(err);
+      });
+  };
+
   return (
     <div className="bg-image" style={{ margin: "8rem 0rem" }}>
       <div className="container p-2">
@@ -332,28 +379,66 @@ const RequestForm = () => {
             Please fill out the form below and we will do our best to respond
             within 1 business day
           </h5>
+          {sucessMessage ? (
+            <h6 className="text-white" style={{ fontWeight: "bold" }}>
+              {sucessMessage}
+            </h6>
+          ) : (
+            <h6>.</h6>
+          )}
           <div className="input-container">
             <Row>
               <Col sm="6" className="p-3">
-                <input className="input px-2" placeholder="Name" />
+                <input
+                  className="input px-2"
+                  placeholder="Name"
+                  name="pname"
+                  value={pname}
+                  onChange={(e) => setPname(e.target.value)}
+                />
               </Col>
 
               <Col sm={6} className="p-3">
-                <input className="input" placeholder="Email address" />
+                <input
+                  className="input"
+                  placeholder="Contact"
+                  name="contact"
+                  type="tel"
+                  value={contact}
+                  onChange={(e) => setContact(e.target.value)}
+                />
               </Col>
             </Row>
             <Row>
               <Col sm={6} className="p-3">
-                <input className="input px-2" placeholder="Subject" />
+                <input
+                  className="input px-2"
+                  placeholder="Subject"
+                  name="subject"
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
+                />
               </Col>
             </Row>
             <Row>
               <Col className="p-2">
                 <h5 className="text-white">Your Message</h5>
-                <textarea className="input px-4" style={{ height: "6rem" }} />
+                <textarea
+                  className="input px-4"
+                  style={{ height: "6rem" }}
+                  name="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                />
               </Col>
             </Row>
-            <Button className="bg-white text-black br-3">Submit</Button>
+            <Button
+              disabled={disbaled}
+              className="bg-white text-black br-3"
+              onClick={handleSubmit}
+            >
+              Submit
+            </Button>
           </div>
           <h6 className="text-white mt-1">
             This site is protected by SPHECHO privacy policy and its terms and
