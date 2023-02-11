@@ -388,38 +388,129 @@ const Sell = () => {
 };
 
 const RequestForm = () => {
+  const [pname, setPname] = React.useState("");
+  const [contact, setContact] = React.useState("");
+  const [message, setMessage] = React.useState("");
+  const [subject, setSubject] = React.useState("");
+  const [disbaled, setDisabled] = React.useState(false);
+
+  const [sucessMessage, setSuccessMessage] = React.useState("");
+
+  const clearFields = () => {
+    setPname("");
+    setContact("");
+    setMessage("");
+    setSubject("");
+  };
+
+  const clearMmessage = () => {
+    setTimeout(() => {
+      setSuccessMessage("");
+    }, 7000);
+  };
+
+  const handleSubmit = () => {
+    setDisabled(true);
+    axios
+      .post("https://qish.metahos.com/leads/add", {
+        callType: "contact-us",
+        contact,
+        subject,
+        message,
+        pname,
+        source: "service",
+      })
+      .then(() => {
+        setDisabled(false);
+        clearFields();
+        setSuccessMessage("Your request successfully submitted.");
+        clearMmessage();
+      })
+      .catch((err: any) => {
+        setSuccessMessage("Network Error: Please try again later");
+        clearMmessage();
+        setDisabled(false);
+        console.log(err);
+      });
+  };
+
   return (
     <div className="bg-image" style={{ margin: "8rem 0rem" }}>
       <div className="container p-2">
         <div className="m-auto text-center py-4 my-4" style={{ zIndex: 10 }}>
           <h2 className="text-white mb-3 b-700">CONTACT US</h2>
-
+          <h5 className="b-500 text-white">
+            Have any questions? We’d like to hear from you.
+          </h5>
+          <h5 className="text-white">
+            Please fill out the form below and we will do our best to respond
+            within 1 business day
+          </h5>
+          {sucessMessage ? (
+            <h6 className="text-white" style={{ fontWeight: "bold" }}>
+              {sucessMessage}
+            </h6>
+          ) : (
+            <h6>.</h6>
+          )}
           <div className="input-container">
             <Row>
               <Col sm="6" className="p-3">
-                <input className="input px-2" placeholder="Name" />
+                <input
+                  className="input px-2"
+                  placeholder="Name"
+                  name="pname"
+                  value={pname}
+                  onChange={(e) => setPname(e.target.value)}
+                />
               </Col>
+
               <Col sm={6} className="p-3">
-                <input className="input px-2" placeholder="Phone" />
+                <input
+                  className="input"
+                  placeholder="Contact"
+                  name="contact"
+                  type="tel"
+                  value={contact}
+                  onChange={(e) => setContact(e.target.value)}
+                />
               </Col>
             </Row>
             <Row>
               <Col sm={6} className="p-3">
-                <input className="input" placeholder="Email address" />
+                <input
+                  className="input px-2"
+                  placeholder="Subject"
+                  name="subject"
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
+                />
               </Col>
             </Row>
             <Row>
               <Col className="p-2">
-                <p className="text-white text-left">Your Message</p>
-                <textarea className="input px-4" style={{ height: "6rem" }} />
+                <h5 className="text-white">Your Message</h5>
+                <textarea
+                  className="input px-4"
+                  style={{ height: "6rem" }}
+                  name="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                />
               </Col>
             </Row>
-            <Button className="bg-white text-black">Submit</Button>
-            <p className="text-white">
-              This site is protected by SPHECHO privacy policy and its terms and
-              conditions
-            </p>
+            <Button
+              disabled={disbaled}
+              className="bg-white text-black br-3"
+              onClick={handleSubmit}
+            >
+              Submit
+            </Button>
           </div>
+          <h6 className="text-white mt-1">
+            This site is protected by SPHECHO privacy policy and its terms and
+            conditions.
+          </h6>
         </div>
       </div>
     </div>
@@ -511,53 +602,53 @@ const NewLetter = () => {
 const Footer = () => {
   const speechLinks = [
     {
-      title: "YOUR  ACCOUNT",
+      title: "Your Account",
     },
     {
-      title: "YOUR ORDERS",
+      title: "Your Orders",
     },
     {
-      title: "SHIPPING & DELIVERY",
+      title: "Shipping & Delivery",
     },
     {
-      title: "RETURN & REFUND",
+      title: "Return & Refund",
     },
     {
-      title: "HELP",
+      title: "Help",
     },
   ];
 
   const usefullLinks = [
     {
-      title: 'PROVIDERS',
+      title: "Providers",
       link: '',
     },
     {
-      title: 'SPHECHO SERVICE',
+      title: "Sphecho Service",
       link: 'http://sphecho-services.metahos.com',
     },
     {
-      title: 'SPHECHO LEARN',
+      title: "Sphecho Learn",
       link: 'http://sphecholms.metahos.com',
     },
     {
-      title: 'SPHECHO SCHOLAR',
+      title: "Sphecho Scholar",
       link: '',
     },
   ];
 
   const aboutUs = [
     {
-      title: "RESOURCES",
+      title: "Resources",
     },
     {
-      title: "SELLING GUIDE",
+      title: "Selling Guide",
     },
     {
-      title: "PRODUCTS IN DEMAND",
+      title: "Products In Demand",
     },
     {
-      title: "FAQs",
+      title: "Faqs",
     },
   ];
 
