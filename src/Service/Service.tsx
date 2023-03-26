@@ -41,6 +41,12 @@ import tw from "../assets/tw.png";
 import yt from "../assets/yt.png";
 import "./service.scss";
 
+// @ts-ignore
+import Fade from 'react-reveal/Fade';
+// @ts-ignore
+import Bounce from 'react-reveal/Bounce';
+import { Parallax } from 'react-scroll-parallax';
+
 const Service = () => {
   return (
     <div style={{ position: "relative" }}>
@@ -53,7 +59,12 @@ const Service = () => {
       <Sell />
       <Story />
       <RequestForm />
+      <FAQS />
       <NewLetter />
+      <div style={{marginTop: "2rem"}}>
+        <h1>REVERBERATING YOUR NEEDS</h1>
+        <p>THROUGH DETERMINATION</p>
+      </div>
       <Footer />
     </div>
   );
@@ -127,7 +138,10 @@ const Banner = () => {
               />
             </Carousel.Item>
           </Carousel>
+          
           <div className="banner-title">
+            <Bounce left>
+              <Parallax translateY={[50, -10]}>
             <h1 className="container">
               THE BEST WAY TO GET THINGS
               <i>
@@ -139,6 +153,8 @@ const Banner = () => {
                 <b style={{ fontSize: "3rem" }}> BEGIN</b>
               </i>
             </h1>
+            </Parallax>
+            </Bounce>
           </div>
         </div>
       </div>
@@ -153,9 +169,12 @@ const SmallBanner = () => {
   return (
     <div className="container" style={{ marginTop: "8rem" }}>
       <div className="m-auto w-75 my-4 d-flex flex-column justify-content-center">
-        <h2 className="benefits-title text-landingPrimary bg-300 text-center text-center">
-          Convenient and affordable therapy with SPHECHO anytime, anywhere
+       <Fade bottom cascade>
+       <h2 className="text-landingPrimary bg-300 text-center text-center" style={{fontWeight: "400", fontSize: "1.3rem"}}>
+        We support you in locating the right solutions to all your rehab-related queries under one roof. We provide services to both adult and pediatric clients. We extend a range of services, inclusive of speech and language therapy, behavioral and psychological therapy, occupational therapy, educational consultation, physiotherapy, counselling, and audiology.
         </h2>
+        </Fade>
+        <Bounce left>
         <button
           className="bg-landingPrimary text-white b-700 p-3 my-3 br-4 px-4"
           style={{
@@ -164,9 +183,10 @@ const SmallBanner = () => {
             border: "none",
             margin: "auto",
           }}
-        >
+          >
           BOOK APPOINTMENT
         </button>
+        </Bounce>
       </div>
     </div>
   );
@@ -175,14 +195,19 @@ const SmallBanner = () => {
 const Methods = () => {
   return (
     <div className="container position-relative" style={{ marginTop: "11rem" }}>
+      <Bounce bottom>
       <h1
         className="benefits-title text-landingPrimary text-center text-center"
         style={{ fontWeight: "700" }}
       >
         METHODS OF SERVICE PROVISION AT SPHECHO
       </h1>
+      </Bounce>
       <Row>
         <Col sm="4">
+        <Parallax  translateX={[-50, 20]}> 
+          <div>
+        <Bounce left>
           <img src={synchornous} width="340rem" className="m-img" />
           <h4 className="text-landingDarkGray text-center b-700 mt-4">
             ONLINE
@@ -191,12 +216,20 @@ const Methods = () => {
             Online refers to services provided live in real time as 2-way
             conferencing via teletherapy
           </h5>
+        </Bounce>
+        </div>
+        </Parallax>
         </Col>
         <Col sm="4">
+          <Parallax translateY={[50, -20]}>
+          <div>
+        <Bounce bottom>
           <img src={hybrid} width="340rem" className="mid-img m-img" />
           <h4 className="text-landingDarkGray text-center b-700 mt-4">
             HYBRID
           </h4>
+          </Bounce>
+
           <h5 className="text-landingDarkGray long-text text-center">
             Hybrid refers to a combination of synchronous and asynchronous
             approaches as needed. This service consists of alternating inperson
@@ -210,8 +243,13 @@ const Methods = () => {
             diagnostic work. Subsequent visits can be teletherapy if this seems
             appropriate to the client and the provider
           </h5>
+        
+          </div>
+          </Parallax>
         </Col>
         <Col sm="4">
+          <Parallax  translateX={[50, -50]}>
+        <Bounce right>
           <img src={asynchronous} width="340rem" className="m-img" />
           <h4 className="text-landingDarkGray text-center b-700 mt-4">
             OFFLINE
@@ -219,8 +257,11 @@ const Methods = () => {
           <h5 className="text-landingDarkGray text-center">
             Offline refers to services provided to clients in-person
           </h5>
+          </Bounce>
+          </Parallax>
         </Col>
       </Row>
+      <Parallax translateY={[50, -20]}>
       <div className="mid-text m-auto w-75">
         <h5 className="text-landingDarkGray" style={{ textAlign: "justify" }}>
           Hybrid refers to a combination of synchronous and asynchronous
@@ -236,6 +277,7 @@ const Methods = () => {
           appropriate to the client and the provider
         </h5>
       </div>
+      </Parallax>
       <div className="m1c cirlceVirbrate"></div>
       <div className="m2c cirlceVirbrate2"></div>
       <div className="m3c cirlceVirbrate3"></div>
@@ -264,7 +306,9 @@ const TopCategories = () => {
           {hubImgs.map((h) => (
             <Col key={h} sm="3">
               <Link to="">
-                <img src={h} style={{ height: "25rem", width: "20rem" }} />
+                <Bounce right>
+                <img src={h} style={{ height: "25rem", width: "20rem", objectFit: "contain" }} />
+                </Bounce>
               </Link>
             </Col>
           ))}
@@ -293,6 +337,7 @@ const Sell = () => {
           {sellimgs.map((image, idx) => (
             <>
               <Col key={idx} sm="4">
+                <Bounce left>
                 <div className="d-flex text-center justify-content-end align-items-center">
                   {idx === 0 ? (
                     <></>
@@ -303,6 +348,7 @@ const Sell = () => {
                   )}
                   <img src={image} width="250rem" />
                 </div>
+                </Bounce>
               </Col>
             </>
           ))}
@@ -381,6 +427,7 @@ const RequestForm = () => {
           <div className="input-container">
             <Row>
               <Col sm="6" className="p-3">
+                <Bounce bottom>
                 <input
                   className="input px-2"
                   placeholder="Name"
@@ -388,9 +435,11 @@ const RequestForm = () => {
                   value={pname}
                   onChange={(e) => setPname(e.target.value)}
                 />
+                </Bounce>
               </Col>
 
               <Col sm={6} className="p-3">
+              <Bounce bottom>
                 <input
                   className="input"
                   placeholder="Contact"
@@ -399,10 +448,12 @@ const RequestForm = () => {
                   value={contact}
                   onChange={(e) => setContact(e.target.value)}
                 />
+                </Bounce>
               </Col>
             </Row>
             <Row>
               <Col sm={6} className="p-3">
+              <Bounce bottom>
                 <input
                   className="input px-2"
                   placeholder="Subject"
@@ -410,11 +461,13 @@ const RequestForm = () => {
                   value={subject}
                   onChange={(e) => setSubject(e.target.value)}
                 />
+                </Bounce>
               </Col>
             </Row>
             <Row>
               <Col className="p-2">
                 <h5 className="text-white">Your Message</h5>
+                <Bounce bottom>
                 <textarea
                   className="input px-4"
                   style={{ height: "6rem" }}
@@ -422,8 +475,10 @@ const RequestForm = () => {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                 />
+                </Bounce>
               </Col>
             </Row>
+            <Bounce bottom>
             <Button
               disabled={disbaled}
               className="bg-white text-black br-3"
@@ -431,6 +486,7 @@ const RequestForm = () => {
             >
               Submit
             </Button>
+            </Bounce>
           </div>
           <h6 className="text-white mt-1">
             This site is protected by SPHECHO privacy policy and its terms and
@@ -450,6 +506,8 @@ const Detail = () => {
     >
       <Row>
         <Col sm="6">
+          <Fade left>
+          <Parallax translateY={[60, -20]}>
           <img
             className="works-img"
             src={works}
@@ -460,6 +518,8 @@ const Detail = () => {
               marginBottom: "2rem",
             }}
           />
+          </Parallax>
+          </Fade>
         </Col>
         <Col
           sm="6"
@@ -467,6 +527,8 @@ const Detail = () => {
           className="d-flex justify-content-center align-items-center b-500 p-4"
         >
           <div className="position-relative">
+            <Fade bottom>
+            <div>
             <h2 className="benefits-title text-landingPrimary bg-600 text-center text-center">
               HOW IT WORKS
             </h2>
@@ -481,6 +543,8 @@ const Detail = () => {
             <h5 className="b-400 px-3" style={{ textAlign: "justify" }}>
               No more. This consultation on your terms.
             </h5>
+            </div>
+            </Fade>
             <div className="circle cirlceVirbrate"></div>
             <div className="circle1 cirlceVirbrate2"></div>
             <div className="circle2 cirlceVirbrate3"></div>
@@ -542,6 +606,7 @@ const Story = () => {
 };
 const NewLetter = () => {
   return (
+    <Bounce left>
     <div className="mb-5 pb-4">
       <div className="container mb-4">
         <div className="m-auto w-75">
@@ -568,6 +633,7 @@ const NewLetter = () => {
         </div>
       </div>
     </div>
+    </Bounce>
   );
 };
 
@@ -717,6 +783,99 @@ const Footer = () => {
         </Row>
       </div>
     </footer>
+  );
+};
+
+
+const FAQS = () => {
+  const faqs = [
+    {
+      id: 1,
+      header: "What is the SPHECHO Certification Program",
+      content:
+        "The SPHECHO certification program is intended to assess the knowledge, talents, and skills needed to carry out a certain job, and, upon passing a certification exam, to serve as a testament to an individual's level of professional competence.",
+    },
+    {
+      id: 2,
+      header: "Who verifies the SPHECHO credentials?",
+      content:
+        "Our credentials are governed and approved by our professional board that frequently reviews all policies and procedures of SPHECHO. The board is composed of a variety of specialists and experts, including clinical experts, therapists, special education professionals etc.",
+    },
+    {
+      id: 3,
+      header: "What is the value in becoming certified?",
+      content: `Recognition for voluntarily meeting standards beyond professional and regional licensing requirements
+      Enhancement of reputation and credibility`,
+    },
+    {
+      id: 4,
+      header: "What job can I get with this certification?",
+      content:
+        "SPHECHO does not guarantee employment or specific job roles, however many professionals can utilize SPHECHO credentials on their professional resume to assist them in standing out among other applicants. All SPHECHO providers are certified.",
+    },
+    {
+      id: 5,
+      header:
+        "Once I register to begin my certification program, how long do I have to complete the training and exam?",
+      content:
+        "You will have to complete the coursework and final exam within 30 days.",
+    },
+    {
+      id: 6,
+      header: "Is the online learning available on demand?",
+      content:
+        "Yes, the SPHECHO learning management system is available 24/7 and is accessible as long as you have internet access. Once you have registered as a provider on the SPHECHO platform and paid for your program, you will be able to access the training modules online.",
+    },
+    {
+      id: 7,
+      header: "When do the courses start?",
+      content:
+        "Once you register and pay for your program, you will have access to your online profile and application. You then have 30 days to access the online training, complete your profile and application details, pass the exam, and submit for approval. ",
+    },
+    {
+      id: 8,
+      header:
+        "After I complete my final exam and submit my application, how long will it be before I get my certification?",
+      content:
+        "Upon board approval, your certification packet will be prepared within 2-3 weeks. Once approved, you will have immediate access to the digital copy of your certificate and badge.",
+    },
+  ];
+
+  return (
+    <div
+      className="container m-auto text-center"
+      style={{ marginBottom: "5rem" }}
+    >
+      <div className="w-75 m-auto ">
+        <h1 className="text-landingPrimary my-4 b-600">
+          FREQUENTLY ASKED QUESTIONS
+        </h1>
+        <p style={{ fontSize: "1.2rem", marginBottom: "6rem" }}>
+          Please click on a topic below to view common questions. Once you have
+          chosen your topic simply click any question to reveal the answer.
+          Can’t find an answer to your question? Contact us today
+        </p>
+        <Accordion defaultActiveKey="0">
+          {faqs.map((faq) => (
+            <Accordion.Item
+              key={faq.id}
+              eventKey={`${faq.id}`}
+              className="accordion-item"
+            >
+              <Accordion.Header className="accordin-h">
+                <p className="accordin-title">{faq.header}</p>
+              </Accordion.Header>
+              <Accordion.Body
+                className="accordin-content"
+                style={{ fontSize: "1.2rem" }}
+              >
+                {faq.content}
+              </Accordion.Body>
+            </Accordion.Item>
+          ))}
+        </Accordion>
+      </div>
+    </div>
   );
 };
 
