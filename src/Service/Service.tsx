@@ -23,9 +23,10 @@ import start from "../assets/start.png";
 //
 import works from "../assets/works.png";
 //
-import synchornous from "../assets/synchornous.png";
-import hybrid from "../assets/hybrid.png";
-import asynchronous from "../assets/asynchronous.png";
+
+import syn from '../assets/syn.png';
+import kimg from "../assets/kimg.png";
+import dimg from "../assets/dimg.png";
 
 //landing pages
 import l1 from "../assets/l1.jpg";
@@ -57,13 +58,14 @@ const Service = () => {
       <TopCategories />
       <Detail />
       <Sell />
-      <Story />
+      {/* <Story /> */}
+      <ClientContact />
       <RequestForm />
       <FAQS />
       <NewLetter />
-      <div style={{marginTop: "2rem"}}>
-        <h1>REVERBERATING YOUR NEEDS</h1>
-        <p>THROUGH DETERMINATION</p>
+      <div style={{marginTop: "2rem", marginBottom: "3rem"}}>
+        <h1 className="" style={{textAlign: "center", fontWeight: "bold"}}>REVERBERATING YOUR NEEDS</h1>
+        <p style={{textAlign: "center"}}>THROUGH DETERMINATION</p>
       </div>
       <Footer />
     </div>
@@ -71,6 +73,7 @@ const Service = () => {
 };
 
 const NavBar = () => {
+
   return (
     <Navbar
       className="nav-bar-container"
@@ -79,6 +82,7 @@ const NavBar = () => {
         left: "2%",
         right: "2%",
         zIndex: 100,
+        
       }}
       expand="lg"
     >
@@ -89,26 +93,26 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto float-right">
-            <Nav.Link as={Link} to="/" className="text-white b-700 link-nav">
+            <Nav.Link as={Link} to="/" className="text-white link-nav">
               HOW IT WORKS
             </Nav.Link>
             <Nav.Link
               as={Link}
               to="/department"
-              className="text-white b-700 link-nav"
+              className="text-white link-nav"
             >
               DEPARTMENTS
             </Nav.Link>
-            <Nav.Link as={Link} to="/" className="text-white b-700 link-nav">
+            <Nav.Link as={Link} to="/" className="text-white link-nav">
               PROVIDERS
             </Nav.Link>
-            <Nav.Link as={Link} to="/" className="text-white b-700 link-nav">
+            <Nav.Link as={Link} to="/" className="text-white link-nav">
               JOIN US
             </Nav.Link>
-            <Nav.Link as={Link} to="/" className="text-white b-700 link-nav">
+            <Nav.Link as={Link} to="/" className="text-white link-nav">
               GET STARTED
             </Nav.Link>
-            <Nav.Link as={Link} to="/" className="text-white b-700 link-nav">
+            <Nav.Link as={Link} to="/" className="text-white link-nav">
               LOGIN
             </Nav.Link>
           </Nav>
@@ -176,7 +180,7 @@ const SmallBanner = () => {
         </Fade>
         <Bounce left>
         <button
-          className="bg-landingPrimary text-white b-700 p-3 my-3 br-4 px-4"
+          className="bg-landingPrimary text-white b-700 p-3 my-3 br-1 px-4"
           style={{
             fontSize: "1.7rem",
             outline: "none",
@@ -198,7 +202,7 @@ const Methods = () => {
       <Bounce bottom>
       <h1
         className="benefits-title text-landingPrimary text-center text-center"
-        style={{ fontWeight: "700" }}
+        style={{ fontWeight: "700", marginBottom: "3rem" }}
       >
         METHODS OF SERVICE PROVISION AT SPHECHO
       </h1>
@@ -208,14 +212,14 @@ const Methods = () => {
         <Parallax  translateX={[-50, 20]}> 
           <div>
         <Bounce left>
-          <img src={synchornous} width="340rem" className="m-img" />
+          <img src={syn} width="340rem" className="m-img" style={{borderRadius: "2rem"}} />
           <h4 className="text-landingDarkGray text-center b-700 mt-4">
             ONLINE
           </h4>
-          <h5 className="text-landingDarkGray text-center">
+          <p className="text-landingDarkGray text-center">
             Online refers to services provided live in real time as 2-way
             conferencing via teletherapy
-          </h5>
+          </p>
         </Bounce>
         </div>
         </Parallax>
@@ -224,13 +228,13 @@ const Methods = () => {
           <Parallax translateY={[50, -20]}>
           <div>
         <Bounce bottom>
-          <img src={hybrid} width="340rem" className="mid-img m-img" />
+          <img src={kimg} width="340rem" className="mid-img m-img"  style={{borderRadius: "2rem"}}/>
           <h4 className="text-landingDarkGray text-center b-700 mt-4">
             HYBRID
           </h4>
           </Bounce>
 
-          <h5 className="text-landingDarkGray long-text text-center">
+          <p className="text-landingDarkGray long-text text-center">
             Hybrid refers to a combination of synchronous and asynchronous
             approaches as needed. This service consists of alternating inperson
             and teletherapy sessions i.e., based on individual client scenario
@@ -242,7 +246,7 @@ const Methods = () => {
             appointments require problem-focused physical assessments and
             diagnostic work. Subsequent visits can be teletherapy if this seems
             appropriate to the client and the provider
-          </h5>
+          </p>
         
           </div>
           </Parallax>
@@ -250,20 +254,20 @@ const Methods = () => {
         <Col sm="4">
           <Parallax  translateX={[50, -50]}>
         <Bounce right>
-          <img src={asynchronous} width="340rem" className="m-img" />
+          <img src={dimg} width="340rem" className="m-img" style={{borderRadius: "2rem"}} />
           <h4 className="text-landingDarkGray text-center b-700 mt-4">
             OFFLINE
           </h4>
-          <h5 className="text-landingDarkGray text-center">
+          <p className="text-landingDarkGray text-center">
             Offline refers to services provided to clients in-person
-          </h5>
+          </p>
           </Bounce>
           </Parallax>
         </Col>
       </Row>
       <Parallax translateY={[50, -20]}>
       <div className="mid-text m-auto w-75">
-        <h5 className="text-landingDarkGray" style={{ textAlign: "justify" }}>
+        <p className="text-landingDarkGray" style={{ textAlign: "justify", fontWeight: "400" }}>
           Hybrid refers to a combination of synchronous and asynchronous
           approaches as needed. This service consists of alternating inperson
           and teletherapy sessions i.e., based on individual client scenario new
@@ -275,14 +279,14 @@ const Methods = () => {
           appointments require problem-focused physical assessments and
           diagnostic work. Subsequent visits can be teletherapy if this seems
           appropriate to the client and the provider
-        </h5>
+        </p>
       </div>
       </Parallax>
-      <div className="m1c cirlceVirbrate"></div>
+      {/* <div className="m1c cirlceVirbrate"></div>
       <div className="m2c cirlceVirbrate2"></div>
       <div className="m3c cirlceVirbrate3"></div>
       <div className="m4c cirlceVirbrate"></div>
-      <div className="m5c cirlceVirbrate2"></div>
+      <div className="m5c cirlceVirbrate2"></div> */}
     </div>
   );
 };
@@ -291,53 +295,78 @@ const TopCategories = () => {
   const hubImgs = [professional, affordable, convenient, effective];
 
   return (
-    <div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#F1F0EE"
-          d="M0,96L80,112C160,128,320,160,480,149.3C640,139,800,85,960,74.7C1120,64,1280,96,1360,112L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-        ></path>
-      </svg>
+    <div style={{marginTop: "5rem", marginBottom: "5rem", paddingTop: "1rem", paddingBottom: "1rem"}}>
       <div
         className="m-auto"
-        style={{ background: "#F1F0EE", marginTop: "-10%", zIndex: 19 }}
+        style={{ background: "white",  zIndex: 19, padding: "5rem 0rem" }}
       >
         <Row className="container m-auto py-2" style={{ width: "80%" }}>
           {hubImgs.map((h) => (
             <Col key={h} sm="3">
               <Link to="">
                 <Bounce right>
-                <img src={h} style={{ height: "25rem", width: "20rem", objectFit: "contain" }} />
+                <img src={h} style={{ width: "15rem", objectFit: "contain" }} />
                 </Bounce>
               </Link>
             </Col>
           ))}
         </Row>
       </div>
-      <svg
-        style={{ marginTop: "-1rem", zIndex: "-400" }}
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 320"
-      >
-        <path
-          fill="#F1F0EE"
-          d="M0,96L80,122.7C160,149,320,203,480,192C640,181,800,107,960,96C1120,85,1280,139,1360,165.3L1440,192L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
-        ></path>
-      </svg>
+     
     </div>
   );
 };
 
+const ClientContact =() => {
+  return <div>
+    <div className="container">
+    <Row>
+    <Col sm="4">
+      <div style={{minHeight: "4rem", width: "4rem", borderTopRightRadius: "2rem", padding: "0rem", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", background: "#dcdbd9"}}>
+        <h1 style={{paddingBottom: "1rem"}}>Clients</h1>
+        <p>Yes! I want to connect with a certified 
+        Provider who combines SKILL and 
+        CLIENT CARE in every session
+        </p>
+        <button style={{padding: ".5rem 1rem", color: "white", background: "black", border: "none", borderRadius: ".5rem",}}>CONTACT US</button>
+      </div>
+    </Col>
+    <Col sm="4">
+      <div style={{minHeight: "4rem", width: "4rem", borderTopRightRadius: "2rem", padding: "0rem", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column"}}>
+        <h1 style={{paddingBottom: "1rem"}}>Providers</h1>
+        <p>Yes! I am a licensed and certified 
+Provider looking to onboard 
+Sphecho SERVICE
+        </p>
+        <button style={{padding: ".5rem 1rem", color: "white", background: "black", border: "none", borderRadius: ".5rem"}}>JOIN OUR NETWORK</button>
+      </div>
+    </Col>
+    <Col sm="4">
+      <div style={{minHeight: "4rem", width: "4rem", borderTopRightRadius: "2rem", padding: "0rem", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column"}}>
+        <h1 style={{paddingBottom: "1rem"}}>Schools</h1>
+        <p>Yes! I want ACCESS to quality service 
+Providers who will help our 
+STUDENTS succeed
+        </p>
+        <button style={{padding: ".5rem 1rem", color: "white", background: "black", border: "none", borderRadius: ".5rem"}}>CONTACT US</button>
+      </div>
+    </Col>
+    </Row>
+    </div>
+  </div>
+}
+
+
 const Sell = () => {
   const sellimgs = [assessment, match, start];
   return (
-    <div className="container ">
+    <div className="container " style={{marginTop: "-11rem"}}>
       <div className="w-75 m-auto">
+          <Bounce cascade bottom>
         <Row>
           {sellimgs.map((image, idx) => (
             <>
               <Col key={idx} sm="4">
-                <Bounce left>
                 <div className="d-flex text-center justify-content-end align-items-center">
                   {idx === 0 ? (
                     <></>
@@ -348,11 +377,11 @@ const Sell = () => {
                   )}
                   <img src={image} width="250rem" />
                 </div>
-                </Bounce>
               </Col>
             </>
           ))}
         </Row>
+          </Bounce>
       </div>
     </div>
   );
@@ -500,14 +529,15 @@ const RequestForm = () => {
 
 const Detail = () => {
   return (
+    <section className="" style={{background: "#70309e", borderTopRightRadius: "14rem", borderBottomLeftRadius: "10rem", paddingBottom: "5rem"}}> 
     <div
       className="container position-relative"
-      style={{ marginTop: "6rem", marginBottom: "5rem", maxWidth: "1400px" }}
+      style={{ marginTop: "-6rem", marginBottom: "5rem", maxWidth: "1400px" }}
     >
       <Row>
         <Col sm="6">
           <Fade left>
-          <Parallax translateY={[60, -20]}>
+          <Parallax translateY={[20, -20]}>
           <img
             className="works-img"
             src={works}
@@ -529,30 +559,31 @@ const Detail = () => {
           <div className="position-relative">
             <Fade bottom>
             <div>
-            <h2 className="benefits-title text-landingPrimary bg-600 text-center text-center">
+            <h2 className="benefits-title  bg-600 text-center text-center" style={{color: "white"}}>
               HOW IT WORKS
             </h2>
-            <h5 className="b-400 px-3" style={{ textAlign: "justify" }}>
+            <p className="" style={{ textAlign: "justify", color: "white", fontFamily: "inter" }}>
               We know how difficult it can be to get a face-to-face therapy
               appointment these days. How expensive it can be. How impossible it
               can feel to squeeze in a visit in your already hectic schedule.
               How unsupported you can feel between sessions. And how you just
               seem to forget all the things your provider told you since that
               last session.
-            </h5>
-            <h5 className="b-400 px-3" style={{ textAlign: "justify" }}>
+            </p>
+            <p className="px-3" style={{ textAlign: "justify", color: 'white' }}>
               No more. This consultation on your terms.
-            </h5>
+            </p>
             </div>
             </Fade>
-            <div className="circle cirlceVirbrate"></div>
+            {/* <div className="circle cirlceVirbrate"></div>
             <div className="circle1 cirlceVirbrate2"></div>
             <div className="circle2 cirlceVirbrate3"></div>
-            <div className="circle3 cirlceVirbrate"></div>
+            <div className="circle3 cirlceVirbrate"></div> */}
           </div>
         </Col>
       </Row>
     </div>
+    </section>
   );
 };
 
@@ -573,6 +604,7 @@ const Story = () => {
       <h2 className="benefits-title text-landingPrimary bg-300 text-center text-center">
         SUCCESS STORIES
       </h2>
+      <Bounce right>
       <div style={{ marginBottom: "7rem" }}>
         <Carousel variant="dark" prevIcon={<></>} nextIcon={<></>}>
           {slide.map((item) => (
@@ -601,18 +633,19 @@ const Story = () => {
           ))}
         </Carousel>
       </div>
+      </Bounce>
     </div>
   );
 };
 const NewLetter = () => {
   return (
     <Bounce left>
-    <div className="mb-5 pb-4">
+    <div className="mb-5 pb-4 container" style={{background: "#f1f0ee", padding: "3rem 2rem", borderRadius: "3rem", margin: 'auto', zoom: "70%"}}>
       <div className="container mb-4">
         <div className="m-auto w-75">
           <h2
             className=" text-center mb-4 b-700"
-            style={{ color: "rgb(163, 160, 160)" }}
+            style={{color: "#662d91"}}
           >
             SUBSCRIBE TO OUR NEWSLETTER
           </h2>
@@ -624,7 +657,7 @@ const NewLetter = () => {
               ></input>
             </Col>
             <Col sm="3" className="p-2 m-auto">
-              <Button className="newsLetter-btn">Subscribe</Button>
+              <Button  style={{background: "#662d91", color: "white"}} className="newsLetter-btn">Subscribe</Button>
             </Col>
           </Row>
           <h6 className="text-center" style={{ color: "gray" }}>
@@ -791,60 +824,42 @@ const FAQS = () => {
   const faqs = [
     {
       id: 1,
-      header: "What is the SPHECHO Certification Program",
+      header: "How does SPHECHO tele practice work? What can i expect?",
       content:
         "The SPHECHO certification program is intended to assess the knowledge, talents, and skills needed to carry out a certain job, and, upon passing a certification exam, to serve as a testament to an individual's level of professional competence.",
     },
     {
       id: 2,
-      header: "Who verifies the SPHECHO credentials?",
+      header: "Why Tele practice?",
       content:
         "Our credentials are governed and approved by our professional board that frequently reviews all policies and procedures of SPHECHO. The board is composed of a variety of specialists and experts, including clinical experts, therapists, special education professionals etc.",
     },
     {
       id: 3,
-      header: "What is the value in becoming certified?",
+      header: "What can i get therapy?",
       content: `Recognition for voluntarily meeting standards beyond professional and regional licensing requirements
       Enhancement of reputation and credibility`,
     },
     {
       id: 4,
-      header: "What job can I get with this certification?",
+      header: "Do i have to be an adult to get teletherapy services?",
       content:
         "SPHECHO does not guarantee employment or specific job roles, however many professionals can utilize SPHECHO credentials on their professional resume to assist them in standing out among other applicants. All SPHECHO providers are certified.",
     },
     {
       id: 5,
       header:
-        "Once I register to begin my certification program, how long do I have to complete the training and exam?",
+        "How often can i see my therapist",
       content:
         "You will have to complete the coursework and final exam within 30 days.",
     },
-    {
-      id: 6,
-      header: "Is the online learning available on demand?",
-      content:
-        "Yes, the SPHECHO learning management system is available 24/7 and is accessible as long as you have internet access. Once you have registered as a provider on the SPHECHO platform and paid for your program, you will be able to access the training modules online.",
-    },
-    {
-      id: 7,
-      header: "When do the courses start?",
-      content:
-        "Once you register and pay for your program, you will have access to your online profile and application. You then have 30 days to access the online training, complete your profile and application details, pass the exam, and submit for approval. ",
-    },
-    {
-      id: 8,
-      header:
-        "After I complete my final exam and submit my application, how long will it be before I get my certification?",
-      content:
-        "Upon board approval, your certification packet will be prepared within 2-3 weeks. Once approved, you will have immediate access to the digital copy of your certificate and badge.",
-    },
+   
   ];
 
   return (
     <div
       className="container m-auto text-center"
-      style={{ marginBottom: "5rem" }}
+      style={{ marginBottom: "6rem", paddingBottom: "5rem", zoom: "80%" }}
     >
       <div className="w-75 m-auto ">
         <h1 className="text-landingPrimary my-4 b-600">
@@ -856,6 +871,7 @@ const FAQS = () => {
           Can’t find an answer to your question? Contact us today
         </p>
         <Accordion defaultActiveKey="0">
+          <Bounce cascade bottom>
           {faqs.map((faq) => (
             <Accordion.Item
               key={faq.id}
@@ -873,6 +889,7 @@ const FAQS = () => {
               </Accordion.Body>
             </Accordion.Item>
           ))}
+          </Bounce>
         </Accordion>
       </div>
     </div>
